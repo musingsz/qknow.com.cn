@@ -9,7 +9,9 @@
 5. [fontawesome图标](http://fontawesome.io/)
 
 #### 后台
-1. [laravel](https://laravel.com/)
+1. [octobercms](http://octobercms.com/)
+
+注意:前台用API，后台用模板引擎。
 
 
 
