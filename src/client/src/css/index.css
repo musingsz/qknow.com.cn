@@ -1,0 +1,7 @@
+header{
+  background: rgba(3, 169, 244, 1);
+  height: 350px;
+}
+header .top{
+  height: 60px;
+}
