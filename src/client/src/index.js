@@ -9,6 +9,7 @@ import 'flexboxgrid';
 import './css/main.css';
 import './css/index.css';
 import './css/normalize.css';
+import 'colors.css'
 import './assets/font-awesome/css/font-awesome.min.css';
 
 

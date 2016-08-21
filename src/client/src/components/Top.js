@@ -8,7 +8,7 @@ import Search from './Search';
 
 const style = {
   marginTop: 13,
-  marginLeft:5,
+  marginLeft:4,
   height:34
 };
 

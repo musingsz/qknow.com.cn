@@ -3,6 +3,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Avatar from 'material-ui/Avatar';
 import FontIcon from 'material-ui/FontIcon';
 import Top from '../components/Top';
+import FooterTop from '../components/FooterTop';
+import Copyright from '../components/Copyright';
 
 
 class App extends Component{
@@ -28,11 +30,12 @@ class App extends Component{
 
 
           </header>
-          <article>
+          <article className="content">
             <div>{this.props.main}</div>
           </article>
           <footer>
-
+              <FooterTop />
+              <Copyright />
           </footer>
         </div>
     </MuiThemeProvider>

@@ -3,12 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "devDependencies": {
+    "colors.css": "^3.0.0",
     "react-scripts": "0.2.1"
   },
   "dependencies": {
     "flexboxgrid": "^6.3.1",
     "font-awesome": "^4.6.3",
     "material-ui": "^0.15.4",
+    "radium": "^0.18.1",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "react-router": "^2.6.1",

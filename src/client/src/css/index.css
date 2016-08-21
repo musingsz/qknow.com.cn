@@ -1,7 +1,23 @@
+a{
+  text-decoration: none;
+  color: rgba(70, 70, 70, 0.866667)
+}
+
+
 header{
   background: rgba(3, 169, 244, 1);
   height: 350px;
 }
 header .top{
   height: 60px;
+}
+
+.content{
+  margin-top: 60px;
+  margin-bottom: 60px;
+  height:auto;
+}
+
+footer .footer_top{
+  height: 210px;
 }
