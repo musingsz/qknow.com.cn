@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-
+import Icon from './Icon';
 
 
 
@@ -14,15 +14,17 @@ const subTitleStyle = {
   color:'#FFF',
   fontSize:38,
   textAlign:'center'
-
 }
 
 class Jumbotron extends Component{
   render(){
     return (
       <div>
-        <p style={titleStyle}>从这里开始成为优秀</p>
-        <p style={subTitleStyle}>全栈工程师</p>
+        <div style={{minHeight:190}}>
+          <p style={titleStyle}>从这里开始成为优秀</p>
+          <p style={subTitleStyle}>全栈工程师</p>
+        </div>
+        <Icon  />
       </div>
     )
   }

@@ -3,7 +3,7 @@ import radium from 'radium';
 import {List, ListItem} from 'material-ui/List';
 import VideoCam from 'material-ui/svg-icons/av/videocam';
 import ContentInbox from 'material-ui/svg-icons/content/inbox';
-
+import { Link } from 'react-router';
 
 const style = {
   base:{
@@ -32,6 +32,7 @@ class View extends Component{
                       primaryText="1-1 下载文件，编辑器配置"
                       leftIcon={<VideoCam />}
                       style={style.item}
+                      children={<Link key={"a"} to={`/video`}>跳转</Link>}
                     />,
                     <ListItem
                       key={2}

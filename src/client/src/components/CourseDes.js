@@ -2,14 +2,16 @@ import React, {Component} from "react";
 import radium from 'radium';
 import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
+import Icon from './Icon';
 
 const style ={
   wrap:{
-    marginTop:15
+    marginTop:15,
+    minHeight:255
   },
   image:{
     height: 180,
-    width: 180,
+    width: 300,
     textAlign: 'center',
     display: 'inline-block',
   },
@@ -50,6 +52,7 @@ class CourseDes extends Component{
 
           </div>
         </div>
+        <Icon  />
       </div>
     )
   }
