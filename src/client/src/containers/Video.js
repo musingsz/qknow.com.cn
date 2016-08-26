@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React, {Component} from "react";
-class Video extends Component{
-  render(){
-    return (
-      <p>homee</p>
-    )
-  }
-};
-
-export default Video
-=======
 import React, {Component} from "react";
 import radium from 'radium';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -72,4 +60,3 @@ class Video extends Component{
 };
 
 export default radium(Video);
->>>>>>> 5de5d3d8f04e2d959b9df581bb374534f25b8740

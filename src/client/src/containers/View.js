@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-import React, {Component} from "react";
-import radium from 'radium';
-import {List, ListItem} from 'material-ui/List';
-
-
-
-
-
-
-class View extends Component{
-  render(){
-    return (
-      <div>
-        <List>
-        </List>
-      </div>
-    )
-  }
-};
-
-export default radium(View)
-=======
 import React, {Component} from "react";
 import radium from 'radium';
 import {List, ListItem} from 'material-ui/List';
@@ -82,4 +59,3 @@ class View extends Component{
 };
 
 export default radium(View);
->>>>>>> 5de5d3d8f04e2d959b9df581bb374534f25b8740
