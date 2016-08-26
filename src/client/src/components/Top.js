@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
-import logo from '../images/u57.png';
+import logo from '../images/logo.png';
 import Search from './Search';
 
 
