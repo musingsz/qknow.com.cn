@@ -2,7 +2,9 @@ a{
   text-decoration: none;
   color: rgba(70, 70, 70, 0.866667)
 }
-
+body{
+    overflow-x:hidden;
+}
 
 header{
   background: rgba(3, 169, 244, 1);
