@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import radium from 'radium';
+import { Link } from 'react-router';
 
 const style ={
   base:{},
@@ -16,6 +17,7 @@ class CourseItem extends Component{
     return (
       <div>
         <div style={[style.item]}>
+          <Link to={`/view`}>跳转</Link>
         </div>
       </div>
     )

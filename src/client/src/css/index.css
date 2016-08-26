@@ -6,10 +6,11 @@ a{
 
 header{
   background: rgba(3, 169, 244, 1);
-  height: 350px;
+  height: auto;
 }
 header .top{
-  height: 60px;
+  height: auto;
+  padding-bottom: 20px
 }
 
 .content{

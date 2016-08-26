@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import radium from 'radium';
 import RaisedButton from 'material-ui/RaisedButton';
+import {  Link } from 'react-router'
+
 
 const style ={
   base:{
@@ -72,13 +74,14 @@ class Home extends Component{
     return (
       <div className="container" style={[style.base]}>
         <div className="row" style={[style.span]}>
-          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
             <span>更加优秀的你，在未来等你</span>
           </div>
         </div>
         <div className="row" style={[style.category]} >
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6"  >
             <div style={[style.one]}>
+              <Link to={`/course`}>跳转</Link>
             </div>
           </div>
           <div className="col-xs-12 col-sm-6 col-md-3 col-lg-3" >
