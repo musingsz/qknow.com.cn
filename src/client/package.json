@@ -52,8 +52,12 @@
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "react-router": "^2.6.1",
+<<<<<<< HEAD
     "react-tap-event-plugin": "^1.0.0",
     "react-video": "^1.5.3"
+=======
+    "react-tap-event-plugin": "^1.0.0"
+>>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4
   },
   "scripts": {
     "start": "node ./scripts/start.js",
@@ -62,4 +66,8 @@
   "eslintConfig": {
     "extends": "./config/eslint.js"
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4

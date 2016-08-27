@@ -24,31 +24,48 @@ class View extends Component{
               <ListItem
                   primaryText="第一章 安装环境"
                   leftIcon={<ContentInbox />}
+<<<<<<< HEAD
                   initiallyOpen={true}
+=======
+                  initiallyOpen={false}
+>>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4
                   primaryTogglesNestedList={true}
                   nestedItems={[
                     <ListItem
                       key={1}
                       primaryText="1-1 下载文件，编辑器配置"
+<<<<<<< HEAD
                       containerElement={<Link  to={`/video`}></Link>}
                       leftIcon={<VideoCam />}
                       style={style.item}
                     />
 
                     ,
+=======
+                      leftIcon={<VideoCam />}
+                      style={style.item}
+                      children={<Link key={"a"} to={`/video`}>跳转</Link>}
+                    />,
+>>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4
                     <ListItem
                       key={2}
                       primaryText="1-2 入门，编辑器配置"
                       leftIcon={<VideoCam />}
                       style={style.item}
+<<<<<<< HEAD
                       containerElement={<Link  to={`/video`}></Link>}
+=======
+>>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4
                     />,
                     <ListItem
                       key={3}
                       primaryText="1-3 下载文件，编辑器配置"
                       leftIcon={<VideoCam />}
                       style={style.item}
+<<<<<<< HEAD
                       containerElement={<Link  to={`/video`}></Link>}
+=======
+>>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4
                     />
                   ]}
                 />

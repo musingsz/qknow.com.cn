@@ -33,9 +33,15 @@ const style = {
 
 class Course extends Component{
   render(){
+<<<<<<< HEAD
     const CourseList = [1,2,3,4,5,6,7,8].map( elem => {
       return (
         <div key={elem} className="col-xs-12 col-sm-4 col-md-3 col-lg-3" style={[style.item]}>
+=======
+    const CourseList = [1,2,3,4,5,6].map( elem => {
+      return (
+        <div key={elem} className="col-xs-12 col-sm-6 col-md-4 col-lg-4" style={[style.item]}>
+>>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4
           <CourseItem />
         </div>
       )

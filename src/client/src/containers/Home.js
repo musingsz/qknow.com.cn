@@ -2,7 +2,11 @@ import React, {Component} from "react";
 import radium from 'radium';
 import RaisedButton from 'material-ui/RaisedButton';
 import {  Link } from 'react-router'
+<<<<<<< HEAD
 import toolImg from '../images/skill-tools-and-workflow01.jpg';
+=======
+
+>>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4
 
 const style ={
   base:{
@@ -68,6 +72,7 @@ const style ={
   }
 }
 
+<<<<<<< HEAD
 const styleR={
   base:{},
   img:{
@@ -75,6 +80,8 @@ const styleR={
     height:'100%'
   }
 }
+=======
+>>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4
 
 class Home extends Component{
   render(){
@@ -88,36 +95,56 @@ class Home extends Component{
         <div className="row" style={[style.category]} >
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6"  >
             <div style={[style.one]}>
+<<<<<<< HEAD
               <Link to={`/course`}>web</Link>
             </div>
           </div>
           <div className="col-xs-12 col-sm-6 col-md-3 col-lg-3" >
           <div style={[style.two]} >
             <Link to={`/course`}>php</Link>
+=======
+              <Link to={`/course`}>跳转</Link>
+            </div>
+          </div>
+          <div className="col-xs-12 col-sm-6 col-md-3 col-lg-3" >
+          <div style={[style.two]}>
+>>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4
           </div>
           </div>
           <div className="col-xs-12 col-sm-6 col-md-3 col-lg-3" >
           <div style={[style.three]}>
+<<<<<<< HEAD
             <Link to={`/course`}>nodejs</Link>
+=======
+>>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4
           </div>
           </div>
         </div>
         <div className="row" style={[style.categorySecond]} >
           <div className="col-xs-12 col-sm-6 col-md-3 col-lg-3"  >
             <div style={[style.four]}>
+<<<<<<< HEAD
               <Link to={`/course`}>
                 <img src={toolImg} alt="" style={[styleR.img]}   />
               </Link>
+=======
+>>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4
             </div>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
           <div style={[style.five]}>
+<<<<<<< HEAD
             <Link to={`/course`}>Linux</Link>
+=======
+>>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4
           </div>
           </div>
           <div className="col-xs-12 col-sm-6 col-md-3 col-lg-3" >
           <div style={[style.six]}>
+<<<<<<< HEAD
             <Link to={`/course`}>test</Link>
+=======
+>>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4
           </div>
           </div>
         </div>

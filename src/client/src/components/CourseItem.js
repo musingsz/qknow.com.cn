@@ -1,14 +1,18 @@
 import React, {Component} from "react";
 import radium from 'radium';
 import { Link } from 'react-router';
+<<<<<<< HEAD
 import img from '../images/test03.jpg';
 
+=======
+>>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4
 
 const style ={
   base:{},
   item:{
     width:'100%',
     height:250,
+<<<<<<< HEAD
     position:"relative",
     overflow:"hidden"
   },
@@ -49,12 +53,19 @@ const style ={
 }
 //  //
 
+=======
+    backgroundColor:'rgba(0, 188, 212, 1)'
+  }
+
+}
+>>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4
 
 class CourseItem extends Component{
   render(){
     return (
       <div>
         <div style={[style.item]}>
+<<<<<<< HEAD
         <Link to={`/view`}>
         <img  src={img} alt=""  style={[style.img]} />
           <div style={[style.intro]}>
@@ -66,6 +77,9 @@ class CourseItem extends Component{
           </div>
         </Link>
 
+=======
+          <Link to={`/view`}>跳转</Link>
+>>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4
         </div>
       </div>
     )
