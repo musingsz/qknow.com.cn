@@ -2,6 +2,9 @@ import React, {Component} from "react";
 import radium from 'radium';
 import RaisedButton from 'material-ui/RaisedButton';
 
+
+
+
 const style = {
   base:{
 
@@ -29,8 +32,15 @@ class Video extends Component{
       <div className="container" >
         <div className="row" >
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12" style={[style.video]}>
-            <video src="http://ock31hjlx.bkt.clouddn.com/events.mp4" controls="controls"></video>
-          </div>
+            <video  className="video-js vjs-default-skin" controls
+              preload="auto"   poster="really-cool-video-poster.jpg"
+              data-setup='{}'>
+              <source src="http://ock31hjlx.bkt.clouddn.com/events.mp4" type="video/mp4" />
+              <p className="vjs-no-js">
+               <a href="http://www.google.cn/chrome/browser/desktop/index.html" target="_blank">当前浏览器版本过低，请使用最新浏览器观看，谢谢合作。</a>
+              </p>
+            </video>
+         </div>
         </div>
         <div className="row between-lg" style={[style.des]}>
           <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2" >
