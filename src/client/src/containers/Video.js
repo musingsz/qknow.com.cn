@@ -7,12 +7,7 @@ const style = {
 
   },
   video:{
-<<<<<<< HEAD
     height:750
-=======
-    height:750,
-    backgroundColor:'rgba(128, 0, 128, 1)'
->>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4
   },
   couseName:{
     fontSize:30
@@ -23,30 +18,18 @@ const style = {
   },
   couseIntro:{
     fontSize:18,
-<<<<<<< HEAD
     lineHeight:1.3
-=======
-    lineHeight:1.2
->>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4
   }
 }
 
 
 class Video extends Component{
-<<<<<<< HEAD
-
-=======
->>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4
   render(){
     return (
       <div className="container" >
         <div className="row" >
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12" style={[style.video]}>
-<<<<<<< HEAD
             <video src="http://ock31hjlx.bkt.clouddn.com/events.mp4" controls="controls"></video>
-=======
->>>>>>> 96d9f048b2f8c3996e3cab2c52e6b4e9bb0c59b4
-
           </div>
         </div>
         <div className="row between-lg" style={[style.des]}>
