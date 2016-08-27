@@ -1,0 +1,27 @@
+a{
+  text-decoration: none;
+  color: rgba(70, 70, 70, 0.866667)
+}
+body{
+    overflow-x:hidden;
+    min-width: 800px;
+}
+
+header{
+  background: rgba(3, 169, 244, 1);
+  height: auto;
+}
+header .top{
+  height: auto;
+  padding-bottom: 20px
+}
+
+.content{
+  margin-top: 60px;
+  margin-bottom: 60px;
+  height:auto;
+}
+
+footer .footer_top{
+  height: 210px;
+}
