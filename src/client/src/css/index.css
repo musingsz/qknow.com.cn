@@ -8,7 +8,7 @@ body{
 }
 
 header{
-  background: "#1bb1b2";
+  background: #1bb1b2;
   height: auto;
 }
 header .top{
@@ -20,38 +20,6 @@ header .top{
   margin-top: 60px;
   margin-bottom: 60px;
   height:auto;
-}
-
-footer .footer_top{
-  height: 210px;
-}
-=======
-a{
-  text-decoration: none;
-  color: rgba(70, 70, 70, 0.866667)
-}
-body{
-    overflow-x:hidden;
-}
-
-header{
-  background: rgba(3, 169, 244, 1);
-  height: auto;
-}
-header .top{
-  height: auto;
-  padding-bottom: 20px
-}
-
-.content{
-  margin-top: 60px;
-  margin-bottom: 60px;
-  height:auto;
-}
-
-.vjs_video_3-dimensions{
-  width: 100%;
-  height: 100%;
 }
 
 footer .footer_top{
