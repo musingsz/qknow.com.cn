@@ -10,10 +10,31 @@ const DEFAULT_ASPECT_RATIO = (9 / 16);
 const DEFAULT_ADJUSTED_SIZE = 0;
 const DEFAULT_RESIZE_DEBOUNCE_TIME = 500;
 const DEFAULT_VIDEO_OPTIONS = {
+  techOrder : ['html5', 'flash'],
   preload: 'auto',
   autoplay: false,
-  controls: true
+  controls: true,
+  controlBar: {
+      volumeMenuButton: {
+        inline: false,
+        vertical: true
+    }
+  }
 };
+//
+// children : {
+//     bigPlayButton : false,
+//     textTrackDisplay : false,
+//     posterImage: false,
+//     errorDisplay : false,
+//     controlBar : {
+//         captionsButton : false,
+//         chaptersButton: false,
+//         subtitlesButton:false,
+//         liveDisplay:false,
+//         playbackRateMenuButton:false
+//     }
+// }
 
 function noop() {}
 
