@@ -46,6 +46,9 @@ module.exports = {
         include: paths.appSrc,
       }
     ],
+    noParse: [
+           /node_modules[\\/]video\.js/
+    ],
     loaders: [
       {
         test: /\.js$/,

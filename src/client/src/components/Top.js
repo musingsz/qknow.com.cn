@@ -34,7 +34,7 @@ class Top extends Component{
         <div className="col-xs-12 col-sm-4 col-md-4 col-lg-2">
           <FlatButton label="登陆" labelStyle={{'fontWeight':'bold',color:'#fff'}}   style={style} />
           <RaisedButton label="加入我们" labelStyle={{'fontWeight':'bold'}}
-            backgroundColor='#FACB51'
+            backgroundColor='#ff5c2d'
             labelColor='#fff'
             style={style} />
 

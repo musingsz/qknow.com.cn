@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import radium from 'radium';
 import RaisedButton from 'material-ui/RaisedButton';
-
+import Madia from '../components/Media';
+import bgHelloWorld from '../images/hello-world.png';
 
 
 
@@ -32,14 +33,8 @@ class Video extends Component{
       <div className="container" >
         <div className="row" >
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12" style={[style.video]}>
-            <video  className="video-js vjs-default-skin" controls
-              preload="auto" width="100%" height="100%"   poster="really-cool-video-poster.jpg"
-              data-setup='{}'>
-              <source src="http://ock31hjlx.bkt.clouddn.com/events.mp4" type="video/mp4" />
-              <p className="vjs-no-js">
-               <a href="http://www.google.cn/chrome/browser/desktop/index.html" target="_blank">当前浏览器版本过低，请使用最新浏览器观看，谢谢合作。</a>
-              </p>
-            </video>
+            <Madia src="http://ock31hjlx.bkt.clouddn.com/events.mp4" poster={bgHelloWorld} >
+            </Madia>
          </div>
         </div>
         <div className="row between-lg" style={[style.des]}>
