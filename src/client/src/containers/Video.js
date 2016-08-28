@@ -33,7 +33,7 @@ class Video extends Component{
         <div className="row" >
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12" style={[style.video]}>
             <video  className="video-js vjs-default-skin" controls
-              preload="auto"   poster="really-cool-video-poster.jpg"
+              preload="auto" width="100%" height="100%"   poster="really-cool-video-poster.jpg"
               data-setup='{}'>
               <source src="http://ock31hjlx.bkt.clouddn.com/events.mp4" type="video/mp4" />
               <p className="vjs-no-js">

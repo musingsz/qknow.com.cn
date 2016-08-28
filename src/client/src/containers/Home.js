@@ -2,7 +2,12 @@ import React, {Component} from "react";
 import radium from 'radium';
 import RaisedButton from 'material-ui/RaisedButton';
 import {  Link } from 'react-router'
-import toolImg from '../images/skill-tools-and-workflow01.jpg';
+import toolCourse from '../images/tool.jpg';
+import webCourse from '../images/web.jpg';
+import linuxCourse from '../images/linux.jpg';
+import phpCourse from '../images/php7.jpg';
+import nodeCourse from '../images/node.jpg';
+import webchatCourse from '../images/webchat.png';
 
 const style ={
   base:{
@@ -90,19 +95,23 @@ class Home extends Component{
         <div className="row" style={[style.category]} >
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6"  >
             <div style={[style.one]}>
-
-              <Link to={`/course`}>web</Link>
+              <Link to={`/course`}>
+                <img src={webCourse} alt="" style={[styleR.img]}   />
+              </Link>
             </div>
           </div>
           <div className="col-xs-12 col-sm-6 col-md-3 col-lg-3" >
           <div style={[style.two]} >
-            <Link to={`/course`}>php</Link>
+            <Link to={`/course`}>
+              <img src={phpCourse} alt="" style={[styleR.img]}   />
+            </Link>
           </div>
           </div>
           <div className="col-xs-12 col-sm-6 col-md-3 col-lg-3" >
           <div style={[style.three]}>
-            <Link to={`/course`}>nodejs</Link>
-
+              <Link to={`/course`}>
+                <img src={nodeCourse} alt="" style={[styleR.img]}   />
+              </Link>
           </div>
           </div>
         </div>
@@ -110,18 +119,22 @@ class Home extends Component{
           <div className="col-xs-12 col-sm-6 col-md-3 col-lg-3"  >
             <div style={[style.four]}>
               <Link to={`/course`}>
-                <img src={toolImg} alt="" style={[styleR.img]}   />
+                <img src={webchatCourse} alt="" style={[styleR.img]}   />
               </Link>
             </div>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
           <div style={[style.five]}>
-            <Link to={`/course`}>Linux</Link>
+            <Link to={`/course`}>
+              <img src={linuxCourse} alt="" style={[styleR.img]}   />
+            </Link>
           </div>
           </div>
           <div className="col-xs-12 col-sm-6 col-md-3 col-lg-3" >
           <div style={[style.six]}>
-            <Link to={`/course`}>test</Link>
+            <Link to={`/course`}>
+              <img src={toolCourse} alt="" style={[styleR.img]}   />
+            </Link>
           </div>
           </div>
         </div>

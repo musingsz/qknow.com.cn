@@ -7,13 +7,15 @@ const titleStyle = {
   color:'#FFF',
   fontSize:40,
   textAlign:'center',
-  marginTop:80
+  marginTop:80,
+  fontWeight:"bold"
 }
 
 const subTitleStyle = {
   color:'#FFF',
   fontSize:38,
-  textAlign:'center'
+  textAlign:'center',
+  fontWeight:"bold"
 }
 
 class Jumbotron extends Component{
