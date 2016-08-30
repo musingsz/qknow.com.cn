@@ -65,27 +65,23 @@ class FooterTop extends Component{
               <p  style={{fontSize:style.fontSize,marginTop:30}}>学习资料</p>
               <ul style={{listStyleType:"none",paddingLeft:0}}>
                 <li key="one"  style={[liStyle.base]}><a href="#">个人博客</a></li>
-                <li key="two" style={[liStyle.base]}><a href="#">个人博客</a></li>
-                <li key="three"  style={[liStyle.base]}><a href="#">个人博客</a></li>
-                <li key="four" style={[liStyle.base]}><a href="#">个人博客</a></li>
+                <li key="two" style={[liStyle.base]}><a href="#">推荐书目</a></li>
               </ul>
             </div>
             <div className="col-xs-12 col-sm-4 col-md-2 col-lg-2">
               <p  style={{fontSize:style.fontSize,marginTop:30}}>社交论坛</p>
               <ul style={{listStyleType:"none",paddingLeft:0}}>
-                <li key="one_e"  style={[liStyle.base]}><a href="#">个人博客</a></li>
-                <li key="two_o" style={[liStyle.base]}><a href="#">个人博客</a></li>
-                <li key="three_e"  style={[liStyle.base]}><a href="#">个人博客</a></li>
-                <li key="four_r" style={[liStyle.base]}><a href="#">个人博客</a></li>
+                <li key="one_e"  style={[liStyle.base]}><a href="#">文章教程</a></li>
+                <li key="two_o" style={[liStyle.base]}><a href="#">版权声明</a></li>
+                <li key="three_e"  style={[liStyle.base]}><a href="#">特别鸣谢</a></li>
               </ul>
             </div>
             <div className="col-xs-12 col-sm-4 col-md-2 col-lg-2">
               <p  style={{fontSize:style.fontSize,marginTop:30}}>关于我们</p>
               <ul style={{listStyleType:"none",paddingLeft:0}}>
-                <li key="one_ee"  style={[liStyle.base]}><a href="#">个人博客</a></li>
-                <li key="two_oo" style={[liStyle.base]}><a href="#">个人博客</a></li>
-                <li key="three_ee"  style={[liStyle.base]}><a href="#">个人博客</a></li>
-                <li key="four_rr" style={[liStyle.base]}><a href="#">个人博客</a></li>
+                <li key="one_ee"  style={[liStyle.base]}><a href="#">联系我们</a></li>
+                <li key="two_oo" style={[liStyle.base]}><a href="#">友情链接</a></li>
+                <li key="three_ee"  style={[liStyle.base]}><a href="#">RSS订阅</a></li>
               </ul>
             </div>
             <div className="col-xs-12 col-sm-4 col-md-2 col-lg-2">
