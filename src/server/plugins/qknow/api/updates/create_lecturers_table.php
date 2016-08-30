@@ -4,11 +4,11 @@ use Schema;
 use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
 
-class CreateVideosTable extends Migration
+class CreateLecturersTable extends Migration
 {
     public function up()
     {
-        Schema::create('videos', function(Blueprint $table) {
+        Schema::create('qknow_api_lecturers', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->timestamps();
@@ -17,6 +17,6 @@ class CreateVideosTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('videos');
+        Schema::dropIfExists('qknow_api_lecturers');
     }
 }

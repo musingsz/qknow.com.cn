@@ -3,26 +3,25 @@
 use Model;
 
 /**
- * Video Model
+ * Lecturer Model
  */
-class Video extends Model
+class Lecturer extends Model
 {
 
+    /**
+     * @var string The database table used by the model.
+     */
+    public $table = 'qknow_api_lecturers';
 
-    public $table = 'videos';
-
-    protected $primaryKey = 'id';
-
-    public $exists = false;
-
-    protected $dates = ['last_seen_at'];
-
-    public $timestamps = true;
-
-    protected $jsonable =  ['data'];
-
+    /**
+     * @var array Guarded fields
+     */
     protected $guarded = ['*'];
 
+    /**
+     * @var array Fillable fields
+     */
+    protected $fillable = [];
 
     /**
      * @var array Relations
