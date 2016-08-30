@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import radium from 'radium';
 import RaisedButton from 'material-ui/RaisedButton';
 import Madia from '../components/Media';
-import bgHelloWorld from '../images/hello-world.png';
+import bgQknow from '../images/qknow.jpg';
 
 
 
@@ -33,13 +33,13 @@ class Video extends Component{
       <div className="container" >
         <div className="row" >
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12" style={[style.video]}>
-            <Madia src="http://ock31hjlx.bkt.clouddn.com/events.mp4" poster={bgHelloWorld} >
+            <Madia src="http://qknow1.oss-cn-shanghai.aliyuncs.com/chrome_01_2016-08-29_222508.mp4" poster={bgQknow} >
             </Madia>
          </div>
         </div>
         <div className="row between-lg" style={[style.des]}>
           <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2" >
-            <span style={[style.couseName]}>课程名称</span>
+            <span style={[style.couseName]}>Chrome开发者完全指南</span>
           </div>
           <div className="col-xs-10 col-sm-10 col-md-10 col-lg-10" >
             <div className="row end-xs" >
@@ -52,9 +52,8 @@ class Video extends Component{
         <div className="row" >
           <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8">
               <span style={[style.couseIntro]}>
-              很多同学在本地开发 Laravel 项目的时候都是有集成的环境，
-              所以在面对一个需要自己搭建环境的时候就素手无策，
-              本系列视频将把部署 Laravel 项目的要点统统囊括，Easy enough.
+              在Web开发者中，Google Chrome是使用最广泛的浏览器。
+              如何使用Chrome来提高我们的开发速度，减少不必要的时间，正是我们开发者必须掌握的技巧。
               </span>
           </div>
         </div>
