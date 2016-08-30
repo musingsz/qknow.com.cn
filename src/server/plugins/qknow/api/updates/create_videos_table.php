@@ -8,15 +8,16 @@ class CreateVideosTable extends Migration
 {
     public function up()
     {
-        Schema::create('qknow_api_videos', function(Blueprint $table) {
+        Schema::create('videos', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
+            $table->string('name', 100);
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('qknow_api_videos');
+        Schema::dropIfExists('videos');
     }
 }

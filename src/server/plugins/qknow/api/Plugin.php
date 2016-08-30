@@ -1,10 +1,10 @@
 <?php namespace Qknow\Api;
 
-
+use Backend;
 use System\Classes\PluginBase;
 
 /**
- * Rest Plugin Information File
+ * Api Plugin Information File
  */
 class Plugin extends PluginBase
 {
@@ -17,16 +17,82 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'RESTful',
-            'description' => 'Generate RESTful controllers',
-            'author'      => 'Mohsin',
-            'icon'        => 'icon-cloud'
+            'name'        => 'Api',
+            'description' => 'No description provided yet...',
+            'author'      => 'Qknow',
+            'icon'        => 'icon-leaf'
         ];
     }
 
+    /**
+     * Register method, called when the plugin is first registered.
+     *
+     * @return void
+     */
     public function register()
     {
 
+    }
+
+    /**
+     * Boot method, called right before the request route.
+     *
+     * @return array
+     */
+    public function boot()
+    {
+
+    }
+
+    /**
+     * Registers any front-end components implemented in this plugin.
+     *
+     * @return array
+     */
+    public function registerComponents()
+    {
+        return []; // Remove this line to activate
+
+        return [
+            'Qknow\Api\Components\MyComponent' => 'myComponent',
+        ];
+    }
+
+    /**
+     * Registers any back-end permissions used by this plugin.
+     *
+     * @return array
+     */
+    public function registerPermissions()
+    {
+        return []; // Remove this line to activate
+
+        return [
+            'qknow.api.some_permission' => [
+                'tab' => 'Api',
+                'label' => 'Some permission'
+            ],
+        ];
+    }
+
+    /**
+     * Registers back-end navigation items for this plugin.
+     *
+     * @return array
+     */
+    public function registerNavigation()
+    {
+        return []; // Remove this line to activate
+
+        return [
+            'api' => [
+                'label'       => 'Api',
+                'url'         => Backend::url('qknow/api/mycontroller'),
+                'icon'        => 'icon-leaf',
+                'permissions' => ['qknow.api.*'],
+                'order'       => 500,
+            ],
+        ];
     }
 
 }

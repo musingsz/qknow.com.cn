@@ -11,7 +11,7 @@ class Video extends Model
     /**
      * @var string The database table used by the model.
      */
-   // public $table = 'qknow_api_videos';
+    public $table = 'videos';
 
     /**
      * @var array Guarded fields
@@ -22,8 +22,6 @@ class Video extends Model
      * @var array Fillable fields
      */
     protected $fillable = [];
-
-    protected $jsonable = ['data'];
 
     /**
      * @var array Relations
@@ -37,6 +35,5 @@ class Video extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
-
 
 }
