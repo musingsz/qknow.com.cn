@@ -13,8 +13,8 @@ class Video extends Controller
     ];
 
     public $restConfig = 'config_rest.yaml';
-    
+
     public function index(){
-        echo "index";
+        echo \Qknow\Api\Models\Video::all();
     }
 }
