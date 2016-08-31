@@ -1,3 +1,7 @@
 1.0.2:
     - First version of qknow.api
     - create_videos_table.php
+    - create_lecturers_table.php
+    - create_properties_table.php
+    - create_property_details_table.php
+    - seed_all_tables.php

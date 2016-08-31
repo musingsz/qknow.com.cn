@@ -41,6 +41,8 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
+        $this->app['Illuminate\Contracts\Http\Kernel']
+            ->pushMiddleware('Qknow\Api\Middleware\BeforeAnyDbQueryMiddleware');
 
     }
 

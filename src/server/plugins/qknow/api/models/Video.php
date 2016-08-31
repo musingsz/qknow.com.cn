@@ -9,7 +9,7 @@ class Video extends Model
 {
 
 
-    public $table = 'videos';
+    public $table = 'qknow_videos';
 
     protected $primaryKey = 'id';
 
@@ -36,5 +36,13 @@ class Video extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
+
+    public function hasOneProperty()
+    {
+
+        return $this->hasOne('Property','category_id','id');
+
+    }
+
 
 }

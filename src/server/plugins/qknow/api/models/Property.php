@@ -3,15 +3,15 @@
 use Model;
 
 /**
- * Lecturer Model
+ * Property Model
  */
-class Lecturer extends Model
+class Property extends Model
 {
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'qknow_lecturers';
+    public $table = 'qknow_properties';
 
 
     protected $primaryKey = 'id';
@@ -38,5 +38,9 @@ class Lecturer extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
+
+    public function belongsToVideo() {
+        return $this->belongsTo('Video','id');
+    }
 
 }

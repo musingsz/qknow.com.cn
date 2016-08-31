@@ -3,15 +3,15 @@
 use Model;
 
 /**
- * Lecturer Model
+ * PropertyDetails Model
  */
-class Lecturer extends Model
+class PropertyDetails extends Model
 {
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'qknow_lecturers';
+    public $table = 'qknow_property_details';
 
 
     protected $primaryKey = 'id';
