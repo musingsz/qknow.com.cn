@@ -14,7 +14,8 @@ class BeforeAnyDbQueryMiddleware
 {
     public function handle($request, Closure $next)
     {
-        DB::enableQueryLog();
+        //DB::enableQueryLog();
+       // DB::disableQueryLog();
         /**
          * Handle request
          */
@@ -24,8 +25,6 @@ class BeforeAnyDbQueryMiddleware
     public function terminate($request, $response)
     {
         // Store or dump the log data...
-        dd(
-            DB::getQueryLog()
-        );
+        //dd( DB::getQueryLog());
     }
 }

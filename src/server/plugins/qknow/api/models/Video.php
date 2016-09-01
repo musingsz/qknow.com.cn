@@ -37,12 +37,7 @@ class Video extends Model
     public $attachOne = [];
     public $attachMany = [];
 
-    public function belongsToProperty()
-    {
 
-        return $this->belongsTo('Property','category_id','id');
-
-    }
 
 
 }

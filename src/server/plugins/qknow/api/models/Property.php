@@ -38,9 +38,5 @@ class Property extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
-
-    public function belongsToVideo() {
-        return $this->belongsTo('Video','id');
-    }
-
+    
 }
