@@ -37,10 +37,10 @@ class Video extends Model
     public $attachOne = [];
     public $attachMany = [];
 
-    public function hasOneProperty()
+    public function belongsToProperty()
     {
 
-        return $this->hasOne('Property','category_id','id');
+        return $this->belongsTo('Property','category_id','id');
 
     }
 
