@@ -4,4 +4,8 @@
     - create_lecturers_table.php
     - create_properties_table.php
     - create_property_details_table.php
+    - create_courses_table.php
+    - create_chapters_table.php
+    - create_course_types_table.php
+    - create_statistics_table.php
     - seed_all_tables.php

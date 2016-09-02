@@ -17,6 +17,8 @@ class CreateLecturersTable extends Migration
             $table->boolean('sex');
             $table->string('company', 20)->nullable();
             $table->string('introduction', 100)->nullable();
+            $table->smallInteger('list_order')->nullable();
+            $table->boolean('display')->default(1);;
             $table->timestamps();
         });
     }

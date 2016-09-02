@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Chapter
+
+# Model Form Field configuration
+form: $/qknow/api/models/chapter/fields.yaml
+
+# Model Class name
+modelClass: Qknow\Api\Models\Chapter
+
+# Default redirect location
+defaultRedirect: qknow/api/chapters
+
+# Create page
+create:
+    title: Create Chapter
+    redirect: qknow/api/chapters/update/:id
+    redirectClose: qknow/api/chapters
+
+# Update page
+update:
+    title: Edit Chapter
+    redirect: qknow/api/chapters
+    redirectClose: qknow/api/chapters
+
+# Preview page
+preview:
+    title: Preview Chapter

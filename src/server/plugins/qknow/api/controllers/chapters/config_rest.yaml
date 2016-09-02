@@ -6,5 +6,6 @@
 allowedActions:
   - index
   - show
+
 # Model Class name
-modelClass: Qknow\Api\Models\Video
+modelClass: Qknow\Api\Models\Chapter

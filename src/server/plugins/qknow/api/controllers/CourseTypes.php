@@ -2,30 +2,27 @@
 
 use BackendMenu;
 use Backend\Classes\Controller;
-use DB;
-use Qknow\Api\Models\Video;
+use Qknow\Api\Models\CourseType;
 
 /**
- * Videos Back-end Controller
+ * Course Types Back-end Controller
  */
-class Videos extends Controller
+class CourseTypes extends Controller
 {
     public $implement = [
         'Mohsin.Rest.Behaviors.RestController'
     ];
 
     public $restConfig = 'config_rest.yaml';
-
-    public function show($id){
-        $data = Video::getVideoById($id);
+    public function index(){
+        $data = CourseType::getAllCourseType();
         return [
             "meta"=>[
-            "code"=>200,
-            "message"=>"请求成功",
-            "server_time"=>time()
-             ],
+                "code"=>200,
+                "message"=>"请求成功",
+                "server_time"=>time()
+            ],
             "data"=>$data
         ];
-
     }
 }

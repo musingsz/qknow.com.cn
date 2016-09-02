@@ -4,13 +4,16 @@ use Model;
 use DB;
 
 /**
- * Video Model
+ * CourseType Model
  */
-class Video extends Model
+class CourseType extends Model
 {
 
+    /**
+     * @var string The database table used by the model.
+     */
+    public $table = 'qknow_course_types';
 
-    public $table = 'qknow_videos';
 
     protected $primaryKey = 'id';
 
@@ -23,7 +26,6 @@ class Video extends Model
     protected $jsonable =  ['data'];
 
     protected $guarded = ['*'];
-
 
     /**
      * @var array Relations
@@ -38,15 +40,12 @@ class Video extends Model
     public $attachOne = [];
     public $attachMany = [];
 
-    public static function getVideoById($id){
-        return DB::table('qknow_videos')
-            ->where('chapter_id',$id)
-            ->where('display', 1)
-            ->select('id','URL')
-            ->get();
+    public static function getAllCourseType(){
+        return DB::table('qknow_course_types')
+                ->where('display', 1)
+                ->select('id','course_type_name', 'image')
+                ->orderBy('list_order','asc')
+                ->get();
     }
-
-
-
 
 }

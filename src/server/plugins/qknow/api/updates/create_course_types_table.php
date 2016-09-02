@@ -4,23 +4,23 @@ use Schema;
 use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
 
-class CreateStatisticsTable extends Migration
+class CreateCourseTypesTable extends Migration
 {
     public function up()
     {
-        Schema::create('qknow_statistics', function(Blueprint $table) {
+        Schema::create('qknow_course_types', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->decimal('score');
-            $table->integer('sum')->unsigned();
+            $table->string('course_type_name', 20);
+            $table->string('image', 50);
             $table->smallInteger('list_order')->nullable();
-            $table->boolean('display');
+            $table->boolean('display')->default(1);;
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('qknow_statistics');
+        Schema::dropIfExists('qknow_course_types');
     }
 }

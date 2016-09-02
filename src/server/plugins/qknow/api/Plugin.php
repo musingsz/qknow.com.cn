@@ -43,6 +43,8 @@ class Plugin extends PluginBase
     {
         $this->app['Illuminate\Contracts\Http\Kernel']
             ->pushMiddleware('Qknow\Api\Middleware\BeforeAnyDbQueryMiddleware');
+        $this->app['Illuminate\Contracts\Http\Kernel']
+            ->pushMiddleware('Qknow\Api\Middleware\CorsMiddleware');
 
     }
 

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Course Type
+
+# Model Form Field configuration
+form: $/qknow/api/models/coursetype/fields.yaml
+
+# Model Class name
+modelClass: Qknow\Api\Models\CourseType
+
+# Default redirect location
+defaultRedirect: qknow/api/coursetypes
+
+# Create page
+create:
+    title: Create Course Type
+    redirect: qknow/api/coursetypes/update/:id
+    redirectClose: qknow/api/coursetypes
+
+# Update page
+update:
+    title: Edit Course Type
+    redirect: qknow/api/coursetypes
+    redirectClose: qknow/api/coursetypes
+
+# Preview page
+preview:
+    title: Preview Course Type
