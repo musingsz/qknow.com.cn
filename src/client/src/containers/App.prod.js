@@ -3,7 +3,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Top from '../components/Top';
 import FooterTop from '../components/FooterTop';
 import Copyright from '../components/Copyright';
-import DevTools from './DevTools';
 
 class App extends Component{
   render(){
@@ -28,11 +27,10 @@ class App extends Component{
               <FooterTop />
               <Copyright />
           </footer>
-          <DevTools />
         </div>
     </MuiThemeProvider>
     )
   }
-};
+}
 
 export default App

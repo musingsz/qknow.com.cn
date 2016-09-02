@@ -33,6 +33,6 @@ class App extends Component{
     </MuiThemeProvider>
     )
   }
-};
+}
 
 export default App

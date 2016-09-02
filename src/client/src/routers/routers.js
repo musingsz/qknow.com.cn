@@ -1,10 +1,26 @@
 import React from 'react';
 import {Route, IndexRoute} from 'react-router';
-import App from "../containers/App";
 import Jumbotron from "../components/Jumbotron";
 import Home from "../containers/Home";
 
+
+
+
+
 //react-router 按需加载配置
+const app = (location, callback) => {
+  require.ensure([], require => {
+    if (process.env.NODE_ENV === 'production') {
+      const App    = require('../containers/App.prod').default;
+      callback(null, App);
+    } else {
+      const App    = require('../containers/App.dev').default;
+      callback(null, App);
+    }
+  }, 'app')
+}
+
+
 const course = (location, callback) => {
   require.ensure([], require => {
     const Course    = require('../containers/Course').default;
@@ -14,7 +30,7 @@ const course = (location, callback) => {
 
 const view = (location, callback) => {
   require.ensure([], require => {
-    const CourseDes    = require('../components/CourseDes').default;
+    const CourseDes  = require('../components/CourseDes').default;
     const View    = require('../containers/View').default;
     callback(null, {adv:CourseDes,main:View});
   }, 'view')
@@ -31,7 +47,7 @@ const video = (location, callback) => {
 
 //路由控制
 const routes = (
-    <Route path="/" component={App}>
+    <Route path="/" getComponent={app} >
         <IndexRoute components={{adv:Jumbotron,main:Home}}/>
         <Route path="course" getComponent={course}/>
         <Route path="view" getComponent={view}/>
