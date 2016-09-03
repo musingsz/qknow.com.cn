@@ -20,11 +20,11 @@ class Chapters extends Controller
     {
         $parent = Chapter::getChapterById($id);
 
-        $child_array = [];
         foreach ($parent as $item){
             $child_array = Chapter::getChapterByParentId($item->id);
+            $item->chapter_list = $child_array;
         }
-        $parent['chapter_list'] = $child_array;
+
         return [
             "meta"=>[
                 "code"=>200,

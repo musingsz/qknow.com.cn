@@ -25,13 +25,33 @@ class SeedAllTables extends Seeder
         CourseType::insert([
             [
                 'course_type_name'=>'HTML+CSS+CSS',
-                'image'=>'http://qknow.com.cn/static/media/web.4ccde285.jpg',
+                'image'=>'../images/web.jpg',
                 'list_order'=>1
             ],
             [
                 'course_type_name'=>'PHP',
-                'image'=>'http://qknow.com.cn/static/media/web.4ccde285.jpg',
+                'image'=>'../images/php7.jpg',
                 'list_order'=>2
+            ],
+            [
+                'course_type_name'=>'NODE',
+                'image'=>'../images/node.jpg',
+                'list_order'=>3
+            ],
+            [
+                'course_type_name'=>'WECHAT',
+                'image'=>'../images/webchat.png',
+                'list_order'=>4
+            ],
+            [
+                'course_type_name'=>'LINUX',
+                'image'=>'../images/linux.jpg',
+                'list_order'=>5
+            ],
+            [
+                'course_type_name'=>'TOOLS',
+                'image'=>'../images/tool.jpg',
+                'list_order'=>6
             ]
 
         ]);
@@ -43,7 +63,7 @@ class SeedAllTables extends Seeder
                 'statistice_id'=>1,
                 'title'=>'chrome开发者完全指南',
                 'sub_title'=>'chrome调试技巧',
-                'image'=>'http://qknow.com.cn/static/media/test03.531810e8.jpg',
+                'image'=>'http://qknow.oss-cn-shanghai.aliyuncs.com/images/test03.jpg',
                 'chapter_count'=>10,
                 'time_length'=>50,
                 'difficulty'=>'初级',
@@ -55,7 +75,7 @@ class SeedAllTables extends Seeder
                 'statistice_id'=>1,
                 'title'=>'chrome开发者完全指南2',
                 'sub_itle'=>'chrome调试技巧2',
-                'images'=>'http://qknow.com.cn/static/media/test03.531810e8.jpg',
+                'images'=>'http://qknow.oss-cn-shanghai.aliyuncs.com/images/test03.jpg',
                 'chapter_count'=>10,
                 'time_length'=>50,
                 'difficulty'=>'初级',
@@ -67,34 +87,59 @@ class SeedAllTables extends Seeder
             [
                 'parent_id'=>0,
                 'course_id'=>1,
+                'video_id'=>0,
                 'title'=>'第一章',
                 'time_length'=>'10',
                 'list_order'=>1
             ],
             [
+                'parent_id'=>0,
+                'course_id'=>1,
+                'video_id'=>0,
+                'title'=>'第二章',
+                'time_length'=>'10',
+                'list_order'=>2
+            ],
+            [
                 'parent_id'=>1,
                 'course_id'=>1,
-                'title'=>'安装',
+                'title'=>'安装1',
+                'video_id'=>1,
                 'time_length'=>'10',
                 'list_order'=>1
             ],
             [
                 'parent_id'=>1,
                 'course_id'=>1,
-                'title'=>'测试',
+                'title'=>'测试1',
+                'video_id'=>1,
                 'time_length'=>'10',
+                'list_order'=>2
+            ],
+            [
+                'parent_id'=>2,
+                'course_id'=>1,
+                'title'=>'安装2',
+                'video_id'=>1,
+                'time_length'=>'10',
+                'list_order'=>1
+            ],
+            [
+                'parent_id'=>2,
+                'course_id'=>1,
+                'title'=>'测试2',
+                'time_length'=>'10',
+                'video_id'=>1,
                 'list_order'=>2
             ]
         ]);
 
         Video::insert([
             [
-                'chapter_id'=>2,
                 'URL'=>'http://qknow1.oss-cn-shanghai.aliyuncs.com/chrome_01_2016-08-29_222508.mp4',
 
             ],
             [
-                'chapter_id'=>3,
                 'URL'=>'http://qknow1.oss-cn-shanghai.aliyuncs.com/chrome_01_2016-08-29_222508.mp4',
 
             ]

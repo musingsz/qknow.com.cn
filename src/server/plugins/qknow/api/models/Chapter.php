@@ -45,7 +45,8 @@ class Chapter extends Model
                     ->where('course_id',$id)
                     ->where('parent_id',0)
                     ->where('display', 1)
-                    ->select('id','parent_id','title','time_length')
+                    ->select('id','course_id','video_id','parent_id','title','time_length')
+                    ->orderBy('qknow_chapters.list_order','asc')
                     ->get();
     }
 
@@ -54,7 +55,8 @@ class Chapter extends Model
         return DB::table('qknow_chapters')
             ->where('parent_id',$id)
             ->where('display', 1)
-            ->select('id','parent_id','title','time_length')
+            ->select('id','course_id','video_id','parent_id','title','time_length')
+            ->orderBy('qknow_chapters.list_order','asc')
             ->get();
     }
 

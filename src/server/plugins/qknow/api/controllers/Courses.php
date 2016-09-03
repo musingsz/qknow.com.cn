@@ -30,6 +30,19 @@ class Courses extends Controller
 
     public function show($id)
     {
+        $data = Course::getCourseByCourseTypeId($id);
+        return [
+            "meta"=>[
+                "code"=>200,
+                "message"=>"请求成功",
+                "server_time"=>time()
+            ],
+            "data"=>$data
+        ];
+    }
+
+    public function showCourse($id)
+    {
         $data = Course::getCourseById($id);
         return [
             "meta"=>[

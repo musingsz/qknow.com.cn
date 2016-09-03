@@ -16,7 +16,7 @@ class CreateCoursesTable extends Migration
             $table->integer('statistice_id')->unsigned();
             $table->string('title', 50);
             $table->string('sub_title', 100);
-            $table->string('image', 50);
+            $table->string('image',200);
             $table->smallInteger('chapter_count');
             $table->smallInteger('time_length');
             $table->enum('difficulty', ["初级","中级","高级"]);

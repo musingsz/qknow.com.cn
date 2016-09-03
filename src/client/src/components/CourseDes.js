@@ -1,7 +1,9 @@
 import React, {Component} from "react";
 import radium from 'radium';
 import Paper from 'material-ui/Paper';
+import { connect } from 'react-redux';
 import RaisedButton from 'material-ui/RaisedButton';
+import { fetchCourseById } from '../actions/courseActions';
 import Icon from './Icon';
 
 const style ={
@@ -33,22 +35,27 @@ const style ={
 }
 
 class CourseDes extends Component{
+  //load course
+  componentDidMount = () =>{
+    this.props.onLoadCourse(this.props.params.courseId);
+  }
+
   render(){
+    const { course } = this.props;
     return (
       <div className="container" style={[style.wrap]}>
         <div className="row">
           <div className="col-xs-6 col-sm-6 col-md-4 col-lg-4">
-            <Paper style={style.image} zDepth={2} />
-
+            <Paper style={style.image} zDepth={2} >
+              <img src={course.get("image")} style={{width:'100%', height:'100%'}} />
+            </Paper>
           </div>
           <div className="col-xs-6 col-sm-6 col-md-8 col-lg-8">
-            <p style={[style.title]}>课程名称</p>
-            <p style={[style.subTitle]}>很多同学在本地开发 Laravel 项目的时候都是有集成的环境，
-            所以在面对一个需要自己搭建环境的时候就素手无策，本系列视频将把部署 Laravel
-            项目的要点统统囊括，Easy enough.</p>
+            <p style={[style.title]}>{course.get("title")}</p>
+            <p style={[style.subTitle]}>{course.get("sub_title")}</p>
 
-             <RaisedButton label="10章节"  style={style.button} />
-             <RaisedButton label="200分钟"   />
+             <RaisedButton label={`${course.get("chapter_count")}章节`}  style={style.button} />
+             <RaisedButton label={`${course.get("chapter_count")}分钟`}   />
 
           </div>
         </div>
@@ -58,4 +65,23 @@ class CourseDes extends Component{
   }
 };
 
-export default radium(CourseDes)
+
+const mapStateToProps = (state) => {
+  return {
+      course:state.course
+  }
+};
+
+const mapDispatchToProps = (dispatch) =>{
+  return {
+    onLoadCourse:(id)=>{
+      dispatch(fetchCourseById(id))
+    }
+
+  }
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(radium(CourseDes));

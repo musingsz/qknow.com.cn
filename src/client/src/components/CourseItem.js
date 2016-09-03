@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import radium from 'radium';
 import { Link } from 'react-router';
-import img from '../images/test03.jpg';
+
 
 const style ={
   base:{},
@@ -54,14 +54,14 @@ class CourseItem extends Component{
     return (
       <div>
         <div style={[style.item]}>
-          <Link to={`/view`}>
-            <img  src={img} alt=""  style={[style.img]} />
+          <Link to={`/view/course/${this.props.id}`}>
+            <img  src={this.props.image} alt=""  style={[style.img]} />
             <div style={[style.intro]}>
-              <h3 style={[style.h3]}>Linux权限管理之特殊权限</h3>
-              <p style={[style.p]}>Linux中的常用权限命令！ </p>
+              <h3 style={[style.h3]}>{this.props.title}</h3>
+              <p style={[style.p]}>{this.props.subTitle} </p>
             </div>
             <div style={[style.bottom]}>
-              <span> 17743 人在学</span>
+              <span> {this.props.sum} 人在学</span>
             </div>
           </Link>
         </div>

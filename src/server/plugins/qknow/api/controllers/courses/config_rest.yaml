@@ -6,6 +6,7 @@
 allowedActions:
   - index
   - show
+  - showCourse
 
 # Model Class name
 modelClass: Qknow\Api\Models\Course

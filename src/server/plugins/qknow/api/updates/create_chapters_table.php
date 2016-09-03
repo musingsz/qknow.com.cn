@@ -13,6 +13,7 @@ class CreateChaptersTable extends Migration
             $table->increments('id');
             $table->integer('parent_id')->unsigned();
             $table->integer('course_id')->unsigned();
+            $table->integer('video_id')->unsigned();
             $table->string('title', 50);
             $table->string('sub_title', 100)->nullable();
             $table->string('image', 50)->nullable();

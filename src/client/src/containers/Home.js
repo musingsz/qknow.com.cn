@@ -2,12 +2,14 @@ import React, {Component} from "react";
 import radium from 'radium';
 import RaisedButton from 'material-ui/RaisedButton';
 import {  Link } from 'react-router'
+import { connect } from 'react-redux';
 import toolCourse from '../images/tool.jpg';
 import webCourse from '../images/web.jpg';
 import linuxCourse from '../images/linux.jpg';
 import phpCourse from '../images/php7.jpg';
 import nodeCourse from '../images/node.jpg';
 import webchatCourse from '../images/webchat.png';
+import { fetchCourseTypes } from '../actions/courseTypeActions';
 
 const style ={
   base:{
@@ -84,6 +86,16 @@ const styleR={
 
 
 class Home extends Component{
+  // constructor(props){
+  //   super(props);
+  // }
+
+ // load coure
+  componentDidMount = () =>{
+    //const { onLoadCourseType } = this.props;
+  //  onLoadCourseType();
+  }
+
   render(){
     return (
       <div className="container" style={[style.base]}>
@@ -95,7 +107,7 @@ class Home extends Component{
         <div className="row" style={[style.category]} >
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6"  >
             <div style={[style.one]}>
-              <Link to={`/course`}>
+              <Link to={`/coursetype/1`}>
                 <img src={webCourse} alt="" style={[styleR.img]}   />
               </Link>
             </div>
@@ -149,4 +161,25 @@ class Home extends Component{
   }
 };
 
-export default radium(Home)
+
+//add state to props
+const mapStateToProps = (state) => {
+  return {
+    courseTypesList:state.courseTypes
+  }
+}
+
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onLoadCourseType : ()=>{
+      dispatch(fetchCourseTypes())
+    }
+  }
+}
+
+
+export default  connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(radium(Home))

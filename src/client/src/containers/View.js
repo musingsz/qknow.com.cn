@@ -1,9 +1,13 @@
 import React, {Component} from "react";
 import radium from 'radium';
+import { connect } from 'react-redux';
 import {List, ListItem} from 'material-ui/List';
+import { fetchCourseTypes } from '../actions/courseTypeActions';
 import VideoCam from 'material-ui/svg-icons/av/videocam';
 import ContentInbox from 'material-ui/svg-icons/content/inbox';
 import { Link } from 'react-router';
+import { fetchChapterById } from '../actions/chapterAction';
+
 
 const style = {
   base:{
@@ -15,28 +19,49 @@ const style = {
 }
 
 class View extends Component{
+
+  //load course
+  componentDidMount = () =>{
+    this.props.onLoadChapterList(this.props.params.courseId);
+  }
   render(){
+
+    //递归生成列表
+    const chapterArray = this.props.chapterList;
+    const chapterList = chapterArray.map((elem) => {
+      // body...
+      const childList = elem.chapter_list.map((item) => {
+        return (
+          <ListItem
+            key={item.id}
+            primaryText={item.title}
+            containerElement={
+              <Link  to={`/video/course/${item.course_id}/${item.id}/next/1`}>
+              </Link>
+            }
+            leftIcon={<VideoCam />}
+            style={style.item}
+          />
+        )
+      })
+      return (
+        <ListItem key={elem.id}
+           primaryText={elem.title}
+           leftIcon={<ContentInbox />}
+           initiallyOpen={false}
+           primaryTogglesNestedList={true}
+           nestedItems={childList}
+         />
+      )
+
+    });
+
     return (
       <div className="container">
         <div className="row">
           <div className=" col-md-offset-2 col-lg-offset-2 col-xs-12 col-sm-12 col-md-8 col-lg-8">
             <List>
-              <ListItem
-                  primaryText="第一章 Chrome开发工具"
-                  leftIcon={<ContentInbox />}
-                  initiallyOpen={true}
-                  primaryTogglesNestedList={true}
-                  nestedItems={[
-                    <ListItem
-                      key={1}
-                      primaryText="1-1 Chrome介绍"
-
-                      containerElement={<Link  to={`/video`}></Link>}
-                      leftIcon={<VideoCam />}
-                      style={style.item}
-                    />
-                  ]}
-                />
+              { chapterList }
             </List>
           </div>
       </div>
@@ -47,4 +72,22 @@ class View extends Component{
   }
 };
 
-export default radium(View);
+const mapStateToProps = (state) => {
+  return {
+      chapterList:state.chapter
+  }
+};
+
+const mapDispatchToProps = (dispatch) =>{
+  return {
+    onLoadChapterList:(id)=>{
+      dispatch(fetchChapterById(id))
+    }
+
+  }
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(radium(View));

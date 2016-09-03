@@ -1,7 +1,9 @@
 import React, {Component} from "react";
 import radium from 'radium';
 import RaisedButton from 'material-ui/RaisedButton';
+import { connect } from 'react-redux';
 import CourseItem from '../components/CourseItem';
+import { fetchCourseByCourseTypeId } from '../actions/courseActions';
 
 const style = {
   base:{},
@@ -32,11 +34,16 @@ const style = {
 }
 
 class Course extends Component{
+  componentDidMount = ()=>{
+    this.props.onLoadCourse(this.props.params.courseTypeId);
+  }
+
+
   render(){
-    const CourseList = [1,2,3,4,5,6,7,8].map( elem => {
+    const CourseList = this.props.courseList.map( elem => {
       return (
-        <div key={elem} className="col-xs-12 col-sm-4 col-md-3 col-lg-3" style={[style.item]}>
-          <CourseItem />
+        <div key={elem}  className="col-xs-12 col-sm-4 col-md-3 col-lg-3" style={[style.item]}>
+          <CourseItem id={elem.id} courseTypeId={elem.course_type_id} subTitle={ elem.sub_title } image={ elem.image } sum={ elem.sum } title={elem.title} />
         </div>
       )
       // body...
@@ -61,4 +68,22 @@ class Course extends Component{
   }
 };
 
-export default radium(Course);
+const mapStateToProps = (state) => {
+  return {
+      courseList:state.course
+  }
+};
+
+const mapDispatchToProps = (dispatch) =>{
+  return {
+    onLoadCourse:(id)=>{
+      dispatch(fetchCourseByCourseTypeId(id))
+    }
+
+  }
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(radium(Course));

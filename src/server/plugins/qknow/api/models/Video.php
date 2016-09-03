@@ -39,11 +39,11 @@ class Video extends Model
     public $attachMany = [];
 
     public static function getVideoById($id){
-        return DB::table('qknow_videos')
-            ->where('chapter_id',$id)
-            ->where('display', 1)
-            ->select('id','URL')
-            ->get();
+        return DB::table('qknow_chapters')
+            ->join('qknow_videos','qknow_videos.id','=','qknow_chapters.video_id')
+            ->where('qknow_chapters.id',$id)
+            ->select('qknow_videos.id','qknow_chapters.title','qknow_videos.URL',"qknow_chapters.sub_title")
+            ->first();
     }
 
 

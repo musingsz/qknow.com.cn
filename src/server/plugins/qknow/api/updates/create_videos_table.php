@@ -12,7 +12,6 @@ class CreateVideosTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
             $table->integer('parent_id')->unsigned();
-            $table->integer('chapter_id')->unsigned();
             $table->string('URL', 50);
             $table->string('image', 50);
             $table->smallInteger('list_order')->nullable();

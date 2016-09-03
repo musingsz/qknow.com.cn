@@ -24,7 +24,6 @@ class Top extends Component{
 
   handleLogin=() => {
     console.log("handleLogin");
-    store.dispatch({ type: 'INCREMENT' })
   }
 
   render(){
@@ -63,9 +62,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleLogin:()=>{
-        dispatch(handleLogin())
-    }
+
   }
 }
 

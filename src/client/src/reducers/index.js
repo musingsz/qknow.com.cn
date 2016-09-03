@@ -1,20 +1,14 @@
 import { combineReducers } from 'redux';
-
-function counter(state = 0, action) {
-  switch (action.type) {
-  case 'INCREMENT':
-    return state + 1
-  case 'DECREMENT':
-    return state - 1
-  default:
-    return state
-  }
-}
-
-
+import courseTypes from './courseType';
+import course from './course';
+import chapter from './chapter';
+import video from './video';
 
 const  rootReducer = combineReducers({
-    counter
+    courseTypes,
+    course,
+    chapter,
+    video
 });
 
 export default rootReducer;
