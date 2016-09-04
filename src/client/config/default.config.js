@@ -5,7 +5,8 @@ if (process.env.NODE_ENV === 'production') {
       "weixin":"#",
       "weibo" :"#",
 
-      "API_URL":"http://localhost:8000"
+      //"API_URL":"http://localhost:8000"
+      "API_URL":"http://115.28.6.179:8005"
   };
 } else {
   module.exports =  {
@@ -14,6 +15,7 @@ if (process.env.NODE_ENV === 'production') {
       "weixin":"#",
       "weibo" :"#",
 
-      "API_URL":"http://localhost:8000"
+    //  "API_URL":"http://localhost:8000"
+    "API_URL":"http://115.28.6.179:8005"
   };
 }
