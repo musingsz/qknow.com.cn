@@ -154,18 +154,26 @@ class Media extends Component{
     var poster = this.props.poster;
     var options = this.getVideoPlayerOptions();
 
+
+
     this._player = vjs(this.getVideoPlayerEl(), options);
+
+
 
     var player = this._player;
 
     player.ready(this.handleVideoPlayerReady());
 
+
     _.forEach(this.props.eventListeners, function(val, key) {
       player.on(key, val);
     });
 
+
     player.src(src);
     player.poster(poster);
+
+
 
     if (this.props.endlessMode) {
       this.addEndlessMode();
@@ -274,8 +282,10 @@ class Media extends Component{
       'vjs-default-skin': this.props.vjsDefaultSkin,
       'vjs-big-play-centered': this.props.vjsBigPlayCentered
     });
+
+
     return (
-      <video ref="videoPlayer" className={videoPlayerClasses}>
+      <video ref="videoPlayer"  className={videoPlayerClasses}>
         {this.props.children || this.renderDefaultWarning()}
       </video>
     );

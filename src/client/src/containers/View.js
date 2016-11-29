@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import radium from 'radium';
 import { connect } from 'react-redux';
 import {List, ListItem} from 'material-ui/List';
-import { fetchCourseTypes } from '../actions/courseTypeActions';
+//import { fetchCourseTypes } from '../actions/courseTypeActions';
 import VideoCam from 'material-ui/svg-icons/av/videocam';
 import ContentInbox from 'material-ui/svg-icons/content/inbox';
 import { Link } from 'react-router';

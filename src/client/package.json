@@ -1,7 +1,11 @@
 {
-  "name": "my-app",
+  "name": "qknow.com.cn",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=development node ./scripts/start.js ",
+    "build": "cross-env NODE_ENV=production node ./scripts/build.js"
+  },
   "devDependencies": {
     "autoprefixer": "6.3.7",
     "babel-core": "6.11.4",
@@ -19,6 +23,7 @@
     "case-sensitive-paths-webpack-plugin": "1.1.2",
     "chalk": "1.1.3",
     "colors.css": "^3.0.0",
+    "cross-env": "^3.1.3",
     "cross-spawn": "4.0.0",
     "css-loader": "0.23.1",
     "eslint": "3.1.1",
@@ -40,13 +45,13 @@
     "redux-devtools": "^3.3.1",
     "redux-devtools-dock-monitor": "^1.1.1",
     "redux-devtools-log-monitor": "^1.0.11",
+    "redux-logger": "^2.6.1",
     "rimraf": "2.5.4",
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
     "webpack": "1.13.1",
     "webpack-dev-server": "1.14.1",
-    "whatwg-fetch": "1.0.0",
-    "redux-logger": "^2.6.1"
+    "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
     "axios": "^0.14.0",
@@ -65,10 +70,6 @@
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0",
     "video.js": "^5.11.6"
-  },
-  "scripts": {
-    "start": "node ./scripts/start.js NODE_ENV=production ",
-    "build": "node ./scripts/build.js"
   },
   "eslintConfig": {
     "extends": "./config/eslint.js"

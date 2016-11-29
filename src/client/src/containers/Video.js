@@ -26,6 +26,9 @@ const style = {
   couseIntro:{
     fontSize:18,
     lineHeight:1.3
+  },
+  pre:{
+    marginRight:20
   }
 }
 
@@ -36,15 +39,16 @@ class Video extends Component{
     this.props.onLoadCourse(this.props.params.courseId);
   }
 
+
+
   render(){
     const { video } = this.props;
-
+    //http://qknow1.oss-cn-shanghai.aliyuncs.com/chrome_01_2016-08-29_222508.mp4
     return (
       <div className="container" >
         <div className="row" >
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12" style={[style.video]}>
-            <Madia src={video.get('URL')}  poster={bgQknow} >
-            
+            <Madia src='http://qknow1.oss-cn-shanghai.aliyuncs.com/chrome_01_2016-08-29_222508.mp4'  poster={bgQknow} >
             </Madia>
          </div>
         </div>
@@ -55,6 +59,7 @@ class Video extends Component{
           <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6" >
             <div className="row end-xs" >
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <RaisedButton label="上一节" primary={true} style={style.pre} />
                 <RaisedButton label="下一节" primary={true}  />
               </div>
             </div>

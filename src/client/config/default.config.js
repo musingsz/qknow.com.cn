@@ -1,3 +1,5 @@
+console.log("NODE_ENV",process.env.NODE_ENV);
+
 if (process.env.NODE_ENV === 'production') {
   module.exports =  {
       "github":'https://github.com/503945930/',
@@ -16,6 +18,6 @@ if (process.env.NODE_ENV === 'production') {
       "weibo" :"#",
 
     //  "API_URL":"http://localhost:8000"
-    "API_URL":"http://115.28.6.179:8005"
+    "API_URL":"http://localhost:8000"
   };
 }

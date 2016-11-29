@@ -47,7 +47,7 @@ class CourseDes extends Component{
         <div className="row">
           <div className="col-xs-6 col-sm-6 col-md-4 col-lg-4">
             <Paper style={style.image} zDepth={2} >
-              <img src={course.get("image")} style={{width:'100%', height:'100%'}} />
+              <img src={course.get("image")} style={{width:'100%', height:'100%'}} alt="" />
             </Paper>
           </div>
           <div className="col-xs-6 col-sm-6 col-md-8 col-lg-8">
