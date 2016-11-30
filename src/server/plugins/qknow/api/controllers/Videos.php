@@ -18,13 +18,16 @@ class Videos extends Controller
 
     public function show($id){
         $data = Video::getVideoById($id);
+        $data_pre = Video::getVideoPreById($id);
+        $data_next = Video::getVideoNextById($id);
+        //dd($data_pre[0]);
         return [
             "meta"=>[
             "code"=>200,
             "message"=>"请求成功",
             "server_time"=>time()
              ],
-            "data"=>$data
+            "data"=>["data"=>$data,"pre"=>$data_pre[0],"next"=>$data_next[0]]
         ];
 
     }

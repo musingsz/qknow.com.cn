@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import radium from 'radium';
 import { connect } from 'react-redux';
 import RaisedButton from 'material-ui/RaisedButton';
+
+
 import { fetchVideoById } from '../actions/videoAction';
 import { fetchCourseById } from '../actions/courseActions';
 import Madia from '../components/Media';
@@ -38,6 +40,7 @@ class Video extends Component{
     this.props.onLoadVideo(this.props.params.id);
     this.props.onLoadCourse(this.props.params.courseId);
   }
+
 
 
 
