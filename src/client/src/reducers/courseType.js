@@ -1,16 +1,14 @@
 import { FETCH_COURSETYPES_SUCCESS } from '../constants'
-import { List } from 'immutable';
+import { List as list } from 'immutable';
 
 
-const initialState = List([]);
+const initialState = list([]);
 const courseTypes = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_COURSETYPES_SUCCESS:
-     return List(action.data);
-     break;
+     return list(action.data);
     default:
       return state;
-      break;
   }
 }
 

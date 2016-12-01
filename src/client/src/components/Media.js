@@ -1,8 +1,11 @@
 import React, {Component} from "react";
 import cx from 'classnames';
-import vjs from 'video.js';
+//import vjs from 'video.js';
+import vjs from '../../node_modules/video.js/dist/video';
 import _  from   'lodash';
 import ReactDOM from 'react-dom';
+
+
 
 const DEFAULT_HEIGHT = "100%";
 const DEFAULT_WIDTH =  "100%";

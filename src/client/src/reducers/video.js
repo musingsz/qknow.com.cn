@@ -1,16 +1,14 @@
 import { FETCH_VIDEO_SUCCESS } from '../constants'
-import { Map } from 'immutable';
+import { Map as map } from 'immutable';
 
 
-const initialState = Map([]);
+const initialState = map([]);
 const video = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_VIDEO_SUCCESS:
-      return Map(action.data);
-      break;
+      return map(action.data);
     default:
       return state;
-      break;
   }
 }
 
