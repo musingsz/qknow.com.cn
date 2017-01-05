@@ -20,7 +20,7 @@ class Videos extends Controller
         $data = Video::getVideoById($id);
         $data_pre = Video::getVideoPreById($id);
         $data_next = Video::getVideoNextById($id);
-        //dd($data_pre[0]);
+        dd($data);
         return [
             "meta"=>[
             "code"=>200,

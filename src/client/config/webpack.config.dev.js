@@ -31,7 +31,8 @@ module.exports = {
       // if we don't have a good solution, we should just make `babel-runtime`
       // a dependency in generated projects.
       // See https://github.com/facebookincubator/create-react-app/issues/255
-      'babel-runtime/regenerator': require.resolve('babel-runtime/regenerator')
+      'babel-runtime/regenerator': require.resolve('babel-runtime/regenerator'),
+       webworkify$: 'webworkify-webpack'
     }
   },
   resolveLoader: {
@@ -99,7 +100,7 @@ module.exports = {
       favicon: paths.appFavicon,
     }),
      new webpack.DefinePlugin({ 'process.env.NODE_ENV': '"development"'}),
-     
+
     // Note: only CSS is currently hot reloaded
     new webpack.HotModuleReplacementPlugin(),
     new CaseSensitivePathsPlugin()
