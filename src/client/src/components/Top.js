@@ -48,7 +48,6 @@ class Top extends Component{
             backgroundColor='#ff5c2d'
             labelColor='#fff'
             style={style} />
-
         </div>
       </div>
     )
