@@ -8,7 +8,18 @@
 module.exports = {
 
   attributes: {
+    score:{
+      type: 'integer'
+    },
+    sum: {
+      type: 'integer'
+    },
+    order: {
+      type: 'integer'
+    },
+    status: {
+      type: 'integer'
+    }
 
   }
 };
-
