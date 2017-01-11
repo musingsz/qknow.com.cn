@@ -32,6 +32,12 @@ module.exports = {
     },
     status: {
       type: 'integer'
+    },
+    course_type_id: {
+      model: 'property'
+    },
+    lecturer_id: {
+      model: 'Lecturer'
     }
   }
 };

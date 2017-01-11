@@ -28,6 +28,9 @@ module.exports = {
     },
     status: {
       type: 'integer'
+    },
+    course_id: {
+      model: 'Course'
     }
   }
 };

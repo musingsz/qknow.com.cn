@@ -15,7 +15,11 @@ module.exports = {
       type: 'integer'
     },
     status: {
-      type: 'integer'
+      type: 'integer',
+      defaultsTo: 1
+    },
+    property_id: {
+      model: 'property'
     }
   }
 };

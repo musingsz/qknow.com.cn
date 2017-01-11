@@ -15,7 +15,12 @@ module.exports = {
       type: 'integer'
     },
     status: {
-      type: 'integer'
+      type: 'integer',
+      defaultsTo: 1
+    },
+    PropertyDetails:{
+      collection: 'PropertyDetails',
+      via: 'property_id'
     }
   }
 };

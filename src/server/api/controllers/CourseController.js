@@ -6,6 +6,10 @@
  */
 
 module.exports = {
-	
+	courseList: (req, res) => {
+		CourseService.courseList(function(course) {
+				//res.ok(course);
+				res.apiSuccess(course)
+		});
+	}
 };
-

@@ -1,8 +1,7 @@
+module.exports = function(message) {
+  var req = this.req;
+  var res = this.res;
 
-
-
-
-module.exports = ( message ) => {
   res.json({
     status: 'OK',
     code: 200,

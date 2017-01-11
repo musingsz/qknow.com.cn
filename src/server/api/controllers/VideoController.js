@@ -9,7 +9,7 @@ module.exports = {
 	getVideo: function(req, res) {
 		VideoService.getVideo(function(videos) {
 				//res.ok(videos);
-				res.myResponse(videos)
+				res.apiSuccess(videos)
 		});
 },
 };
