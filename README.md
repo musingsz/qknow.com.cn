@@ -36,6 +36,10 @@
   * master发布分支
   * dev测试分支
 
+### 数据库设计
+
+将`数据库设计.xml`加载到[](http://ondras.zarovi.cz/sql/demo/?keyword=default)
+
 
 ### 测试
 ### 优化

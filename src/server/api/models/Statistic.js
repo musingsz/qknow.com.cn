@@ -18,9 +18,10 @@ module.exports = {
       type: 'integer'
     },
     status: {
-      type: 'integer'
+      type: 'integer',
+      defaultsTo: 1
     },
-    course_id: {
+    course: {
       model: 'Course'
     }
   }

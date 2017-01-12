@@ -31,12 +31,13 @@ module.exports = {
       type: 'integer'
     },
     status: {
-      type: 'integer'
+      type: 'integer',
+      defaultsTo: 1
     },
-    course_type_id: {
-      model: 'property'
+    course_type: {
+      model: 'PropertyDetails'
     },
-    lecturer_id: {
+    lecturer: {
       model: 'Lecturer'
     }
   }

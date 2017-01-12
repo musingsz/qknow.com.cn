@@ -20,7 +20,7 @@ module.exports = {
     },
     PropertyDetails:{
       collection: 'PropertyDetails',
-      via: 'property_id'
+      via: 'property'
     }
   }
 };

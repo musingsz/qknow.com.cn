@@ -17,7 +17,7 @@ module.exports = {
     sex: {
       type: 'string'
     },
-    compane: {
+    company: {
       type: 'string'
     },
     introduction: {
@@ -27,7 +27,8 @@ module.exports = {
       type: 'integer'
     },
     status: {
-      type: 'integer'
+      type: 'integer',
+      defaultsTo: 1
     }
   }
 };

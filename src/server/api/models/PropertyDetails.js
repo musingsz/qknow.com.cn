@@ -18,7 +18,7 @@ module.exports = {
       type: 'integer',
       defaultsTo: 1
     },
-    property_id: {
+    property: {
       model: 'property'
     }
   }

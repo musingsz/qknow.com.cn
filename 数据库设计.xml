@@ -80,7 +80,7 @@
 </key>
 <comment>视频表</comment>
 </table>
-<table x="530" y="241" name="property">
+<table x="267" y="193" name="property">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -98,7 +98,7 @@
 </key>
 <comment>属性表</comment>
 </table>
-<table x="490" y="14" name="property_details">
+<table x="478" y="43" name="property_details">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -193,7 +193,7 @@
 <default>NULL</default></row>
 <row name="course_type_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
-<default>NULL</default><relation table="property" row="id" />
+<default>NULL</default><relation table="property_details" row="id" />
 <comment>课程类型id</comment>
 </row>
 <row name="lecturer_id" null="1" autoincrement="0">
