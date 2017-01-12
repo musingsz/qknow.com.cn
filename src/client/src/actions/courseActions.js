@@ -20,7 +20,7 @@ function fetchCourseSuccess(data){
 //根据课程分类id获取所有id
 export function fetchCourseByCourseTypeId(id){
   return (dispatch)=>{
-    axios.get(config.API_URL+`/api/v1/courses/${id}`).then(function(response){
+    axios.get(config.API_URL+`/courseType/${id}/course`).then(function(response){
       if(response.status !== 200 && response.data.meta.code !== 200){
         throw new Error("Bad response from server");
       }
@@ -34,7 +34,7 @@ export function fetchCourseByCourseTypeId(id){
 //根据课程id获取详情
 export function fetchCourseById(id){
   return (dispatch)=>{
-    axios.get(config.API_URL+`/api/v1/course/detail/${id}`).then(function(response){
+    axios.get(config.API_URL+`/course/${id}`).then(function(response){
       if(response.status !== 200 && response.data.meta.code !== 200){
         throw new Error("Bad response from server");
       }

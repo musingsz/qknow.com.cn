@@ -61,7 +61,7 @@ module.exports.init = () => {
  Promise.resolve(Course.create({
    title: "node",
    sub_title: "node学习",
-   image: "...",
+   image: "http://jiuye-res.jikexueyuan.com/zhiye/showcase/attach-/20160913/115fd11f-59cd-41d9-a255-f42b924fe168.jpg",
    chapter_count: 20,
    time_length: 100,
    difficulty: "初级",
@@ -72,7 +72,7 @@ module.exports.init = () => {
  Promise.resolve(Course.create({
    title: "node环境",
    sub_title: "node环境",
-   URL: "...",
+   URL: "http://jiuye-res.jikexueyuan.com/zhiye/showcase/attach-/20160913/115fd11f-59cd-41d9-a255-f42b924fe168.jpg",
    image: "111",
    time_length: 100,
    course: "course",

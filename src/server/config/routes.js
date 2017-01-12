@@ -47,5 +47,8 @@ module.exports.routes = {
   ***************************************************************************/
   'get /api/v1/courseType': 'VideoController.getVideo',
 
-  'get /api/v1/course': 'CourseController.courseList'
+  'get /api/v1/course': 'CourseController.courseList',
+  'get /api/v1/courseType/:courseType/course': 'CourseController.courseListByCourseTypeId',
+  'get /api/v1/course/:courseId': 'CourseController.courseById'
+
 };

@@ -11,5 +11,15 @@ module.exports = {
 				//res.ok(course);
 				res.apiSuccess(course)
 		});
+	},
+	courseListByCourseTypeId: (req, res) => {
+		CourseService.courseListById({ courseType: req.params.courseType } ,function(course) {
+				res.apiSuccess(course)
+		});
+	},
+	courseById: (req, res) => {
+		CourseService.courseById({ courseId: req.params.courseId } ,function(course) {
+				res.apiSuccess(course)
+		});
 	}
 };
