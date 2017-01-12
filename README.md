@@ -38,7 +38,7 @@
 
 ### 数据库设计
 
-将`数据库设计.xml`加载到[](http://ondras.zarovi.cz/sql/demo/?keyword=default)
+将`数据库设计.xml`加载到[http://ondras.zarovi.cz/sql/demo/?keyword=default](http://ondras.zarovi.cz/sql/demo/?keyword=default)
 
 
 ### 测试
