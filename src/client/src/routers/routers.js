@@ -49,9 +49,9 @@ const video = (location, callback) => {
 const routes = (
     <Route path="/" getComponent={app} >
         <IndexRoute components={{adv:Jumbotron,main:Home}}/>
-        <Route path="coursetype/:courseTypeId" getComponent={course}/>
+        <Route path="coursetype/:courseTypeId/course" getComponent={course}/>
         <Route path="view/course/:courseId" getComponent={view}/>
-        <Route path="video/course/:courseId/:id/next/:nid" getComponent={video}/>
+        <Route path="course/:courseId/video/:id/" getComponent={video}/>
     </Route>
 )
 

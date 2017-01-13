@@ -28,15 +28,17 @@ class View extends Component{
 
     //递归生成列表
     const chapterArray = this.props.chapterList;
+    console.log("chapterArray" ,chapterArray);
+
     const chapterList = chapterArray.map((elem) => {
       // body...
-      const childList = elem.chapter_list.map((item) => {
+      const childList = elem.childVideo.map((item) => {
         return (
           <ListItem
             key={item.id}
             primaryText={item.title}
             containerElement={
-              <Link  to={`/video/course/${item.course_id}/${item.id}/next/1`}>
+              <Link  to={`/course/${item.course}/video/${item.id}/`}>
               </Link>
             }
             leftIcon={<VideoCam />}

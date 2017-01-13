@@ -50,6 +50,8 @@ const style ={
 
 
 class CourseItem extends Component{
+
+
   render(){
     return (
       <div>

@@ -39,6 +39,9 @@ module.exports = {
     },
     lecturer: {
       model: 'Lecturer'
+    },
+    statistic:{
+      model: 'Statistic',
     }
   }
 };

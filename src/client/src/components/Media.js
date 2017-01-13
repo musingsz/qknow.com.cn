@@ -109,6 +109,7 @@ class Media extends Component{
 
   getVideoPlayerEl(){
     var element = ReactDOM.findDOMNode(this.refs.videoPlayer);
+
     return  element;
   }
 
@@ -220,6 +221,8 @@ class Media extends Component{
   }
 
   playVideo(){
+    console.log("this.props.src", "this.props.preSrc");
+
     this._player.play();
   }
 
@@ -296,7 +299,7 @@ class Media extends Component{
 };
 
 Media.propTypes = {
-    src: React.PropTypes.string,
+    preSrc: React.PropTypes.string,
     poster: React.PropTypes.string.isRequired,
     height: React.PropTypes.number,
     width: React.PropTypes.number,

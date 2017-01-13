@@ -18,7 +18,7 @@ function fetchChapterListSuccess(data){
 //根据课程id获取详情
 export function fetchChapterById(id){
   return (dispatch)=>{
-    axios.get(config.API_URL+`/api/v1/chapters/${id}`).then(function(response){
+    axios.get(config.API_URL+`/course/${id}/video`).then(function(response){
       if(response.status !== 200 && response.data.meta.code !== 200){
         throw new Error("Bad response from server");
       }

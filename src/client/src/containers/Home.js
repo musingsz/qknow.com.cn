@@ -107,7 +107,7 @@ class Home extends Component{
         <div className="row" style={[style.category]} >
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6"  >
             <div style={[style.one]}>
-              <Link to={`/coursetype/1`}>
+              <Link to={`/coursetype/1/course`}>
                 <img src={webCourse} alt="" style={[styleR.img]}   />
               </Link>
             </div>

@@ -1,4 +1,4 @@
-module.exports = function(message) {
+module.exports = function(err) {
   var res = this.res;
   res.json({
     status: 'Error',

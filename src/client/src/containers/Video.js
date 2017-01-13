@@ -6,7 +6,8 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 import { fetchVideoById } from '../actions/videoAction';
 import { fetchCourseById } from '../actions/courseActions';
-import Madia from '../components/Media';
+//import Madia from '../components/Media';
+import PlyrMidea from '../components/PlyrMidea'
 import bgQknow from '../images/qknow.jpg';
 
 
@@ -16,7 +17,7 @@ const style = {
 
   },
   video:{
-    height:750
+    height:700
   },
   couseName:{
     fontSize:30
@@ -46,13 +47,23 @@ class Video extends Component{
 
   render(){
     const { video } = this.props;
+
     //http://qknow1.oss-cn-shanghai.aliyuncs.com/chrome_01_2016-08-29_222508.mp4
     return (
       <div className="container" >
         <div className="row" >
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12" style={[style.video]}>
-            <Madia src='http://qknow1.oss-cn-shanghai.aliyuncs.com/chrome_01_2016-08-29_222508.mp4'  poster={bgQknow} >
-            </Madia>
+            <PlyrMidea source={{type:'video',
+                       sources:[
+                         {
+                           src:video.get("URL"),
+                           type:'video/mp4'
+                          }
+                       ],
+                       poster:bgQknow
+                     }}
+             options={{}} >
+            </PlyrMidea>
          </div>
         </div>
         <div className="row between-lg" style={[style.des]}>

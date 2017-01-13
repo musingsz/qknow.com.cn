@@ -66,18 +66,54 @@ module.exports.init = () => {
    time_length: 100,
    difficulty: "初级",
    course_type: 1,
-   lecturer: 1
+   lecturer: 1,
+   statistic: 1
  }));
  //添加视频
- Promise.resolve(Course.create({
-   title: "node环境",
-   sub_title: "node环境",
-   URL: "http://jiuye-res.jikexueyuan.com/zhiye/showcase/attach-/20160913/115fd11f-59cd-41d9-a255-f42b924fe168.jpg",
-   image: "111",
-   time_length: 100,
-   course: "course",
-   parent_video: 0
- }));
+ Promise.resolve(Video.create([
+   {
+     title: "第一章",
+     sub_title: "node环境",
+     course: 1,
+     parent_video: 0,
+     order: 1
+   },
+   {
+     title: "第二章",
+     sub_title: "第二章",
+     course: 1,
+     parent_video: 0,
+     order: 1
+   },
+   {
+     title: "node环境",
+     sub_title: "node环境",
+     image: "111",
+     time_length: 100,
+     course: 1,
+     order: 1,
+     parent_video: 2,
+     URL:"http://qknow1.oss-cn-shanghai.aliyuncs.com/chrome_01_2016-08-29_222508.mp4"
+
+   },
+   {
+     title: "node环境1",
+     sub_title: "node环境2",
+     image: "111",
+     time_length: 100,
+     course: 1,
+     order: 2,
+     parent_video: 2,
+     URL:"http://qknow1.oss-cn-shanghai.aliyuncs.com/chrome_01_2016-08-29_222508.mp4"
+
+   }
+ ]));
+
+ Promise.resolve(Statistic.create({
+   score:90,
+   sum: 1000,
+   course:1,
+ }))
 
 
 
