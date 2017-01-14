@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import radium from 'radium';
 import { connect } from 'react-redux';
 import RaisedButton from 'material-ui/RaisedButton';
-
+import {  Link } from 'react-router';
 
 import { fetchVideoById } from '../actions/videoAction';
 import { fetchCourseById } from '../actions/courseActions';
@@ -48,6 +48,24 @@ class Video extends Component{
   render(){
     const { video } = this.props;
 
+    //上一节
+    const preButton = video.get('pre_video') ? (
+      <RaisedButton  containerElement={<Link to={`/course/${this.props.params.courseId}/video/${video.get('pre_video')}`} />}
+       label="上一节"  target="_blank" primary={true} style={style.pre} />
+    ) : (
+      <RaisedButton disabled label="上一节" primary={true} style={style.pre} />
+    );
+
+    //下一节
+    const nextButton = video.get('next_video') ? (
+      <RaisedButton containerElement={<Link to={`/course/${this.props.params.courseId}/video/${video.get('next_video')}`} />}
+       label="下一节"  target="_blank" primary={true}  />
+    ) : (
+      <RaisedButton disabled  label="下一节" primary={true}  />
+    );
+
+
+
     //http://qknow1.oss-cn-shanghai.aliyuncs.com/chrome_01_2016-08-29_222508.mp4
     return (
       <div className="container" >
@@ -73,8 +91,8 @@ class Video extends Component{
           <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6" >
             <div className="row end-xs" >
               <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <RaisedButton label="上一节" primary={true} style={style.pre} />
-                <RaisedButton label="下一节" primary={true}  />
+                {preButton}
+                {nextButton}
               </div>
             </div>
           </div>

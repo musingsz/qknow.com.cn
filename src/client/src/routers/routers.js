@@ -51,7 +51,7 @@ const routes = (
         <IndexRoute components={{adv:Jumbotron,main:Home}}/>
         <Route path="coursetype/:courseTypeId/course" getComponent={course}/>
         <Route path="view/course/:courseId" getComponent={view}/>
-        <Route path="course/:courseId/video/:id/" getComponent={video}/>
+        <Route path="course/:courseId/video/:id" getComponent={video}/>
     </Route>
 )
 

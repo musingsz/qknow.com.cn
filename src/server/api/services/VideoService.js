@@ -28,14 +28,5 @@ module.exports = {
       if (err) next(err, null);
       next(null, videos);
     });
-  },
-  //根据课程ID 上一节
-  nextVideoById: (obj, next) => {
-      Video.find({
-        id: obj.videoId
-      }).exec((err, videos) => {
-        if (err) next(err, null);
-        next(null, videos);
-      });
-    },
+  }
 }

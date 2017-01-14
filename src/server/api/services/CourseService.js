@@ -11,8 +11,6 @@ module.exports = {
   },
   //根据课程类型id查询课程
   courseListByCourseTypeId: (obj, next) => {
-    console.log("message","message");
-
     Course.find({
         "course_type": obj.courseType
       })

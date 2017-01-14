@@ -53,10 +53,8 @@ class CourseDes extends Component{
           <div className="col-xs-6 col-sm-6 col-md-8 col-lg-8">
             <p style={[style.title]}>{course.get("title")}</p>
             <p style={[style.subTitle]}>{course.get("sub_title")}</p>
-
              <RaisedButton label={`${course.get("chapter_count")}章节`}  style={style.button} />
              <RaisedButton label={`${course.get("chapter_count")}分钟`}   />
-
           </div>
         </div>
         <Icon  />

@@ -35,6 +35,12 @@ module.exports = {
     },
     parent_video:{
       model: "Video"
+    },
+    pre_video:{
+      model: "Video"
+    },
+    next_video:{
+      model: "Video"
     }
   }
 };
