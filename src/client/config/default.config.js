@@ -5,9 +5,7 @@ if (process.env.NODE_ENV === 'production') {
       "qq"    :"http://wpa.qq.com/msgrd?v=3&uin=503945930&site=qq&menu=yes",
       "weixin":"#",
       "weibo" :"#",
-
-      //"API_URL":"http://localhost:8000"
-      "API_URL":"http://115.28.6.179:1337"
+      "API_URL":"http://115.28.6.179:8011"
   };
 } else {
   module.exports =  {
