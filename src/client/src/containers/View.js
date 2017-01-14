@@ -28,7 +28,6 @@ class View extends Component{
 
     //递归生成列表
     const chapterArray = this.props.chapterList;
-    console.log("chapterArray" ,chapterArray);
 
     const chapterList = chapterArray.map((elem) => {
       // body...

@@ -7,7 +7,7 @@ if (process.env.NODE_ENV === 'production') {
       "weibo" :"#",
 
       //"API_URL":"http://localhost:8000"
-      "API_URL":"http://localhost:1337"
+      "API_URL":"http://115.28.6.179:1337"
   };
 } else {
   module.exports =  {
