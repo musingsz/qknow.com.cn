@@ -46,10 +46,7 @@ module.exports = {
         loader: 'eslint',
         include: paths.appSrc,
       }
-    ],
-    noParse: [
-           /node_modules[\\/]video\.js/
-    ],
+    ]
     loaders: [
       {
         test: /\.js$/,
