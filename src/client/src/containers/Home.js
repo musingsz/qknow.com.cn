@@ -27,36 +27,30 @@ const style ={
   },
   one:{
     height:270,
-    backgroundColor:'rgba(255, 64, 155, 1)',
     margin:'0 10px 5px 0',
     width:'100%'
   },
   two:{
     height:270,
-    backgroundColor:'rgba(156, 39, 176, 1)',
     margin:'0 10px 5px 0',
     width:'100%'
   },
   three:{
     height:270,
-    backgroundColor:'rgba(0, 188, 212, 1)',
     width:'100%'
   },
   four:{
     height:270,
-    backgroundColor:'rgba(255, 223, 37, 1)',
     margin:'0 10px 5px 0',
     width:'100%'
   },
   five:{
     height:270,
-    backgroundColor:'rgba(59, 59, 158, 1)',
     margin:'0 10px 5px 0',
     width:'100%'
   },
   six:{
     height:270,
-    backgroundColor:'rgba(29, 233, 182, 1)',
     width:'100%'
   },
   center:{
