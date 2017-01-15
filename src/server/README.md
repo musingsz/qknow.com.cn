@@ -1,3 +1,1 @@
-# qknow-server
-
-a [Sails](http://sailsjs.org) application
+# qknow.com.cn server
