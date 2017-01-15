@@ -23,14 +23,14 @@ class Top extends Component{
 
 
   handleLogin=() => {
-    console.log("handleLogin");
+
   }
 
   render(){
     return (
       <div className="row top">
         <div className="col-xs-12 col-sm-4 col-md-2 col-lg-2">
-          <a href='#'>
+          <a href='/'>
             <img src={logo} alt='' width="80px" height="60px" />
           </a>
         </div>

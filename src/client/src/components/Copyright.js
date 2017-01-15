@@ -20,7 +20,7 @@ class Copyright extends Component{
       <div className="row" style={[style.base]}>
         <div className="container">
           <div className="col-lg-12">
-            <p style={[style.p]}>© Qknow 2016. All rights reserved. 蜀ICP备15030234号-1</p>
+            <p style={[style.p]}>© Qknow 2017. All rights reserved. 蜀ICP备15030234号-1</p>
           </div>
         </div>
       </div>
