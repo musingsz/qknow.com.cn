@@ -23,5 +23,6 @@ header .top{
 }
 
 footer .footer_top{
-  height: 210px;
+  height: auto;
+  padding-bottom:10px;
 }

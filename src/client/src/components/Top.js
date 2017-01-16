@@ -4,14 +4,10 @@ import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
 import logo from '../images/logo.png';
 import Search from './Search';
+import style from './top/top.css'
+import radium from 'radium';
 
 
-
-const style = {
-  marginTop: 13,
-  marginLeft:4,
-  height:34
-};
 
 
 
@@ -29,12 +25,12 @@ class Top extends Component{
   render(){
     return (
       <div className="row top">
-        <div className="col-xs-12 col-sm-4 col-md-2 col-lg-2">
+        <div className=" col-xs-5 col-sm-4 col-md-2 col-lg-2">
           <a href='/'>
             <img src={logo} alt='' width="80px" height="60px" />
           </a>
         </div>
-        <div className="col-xs-12 col-sm-4 col-md-6 col-lg-8">
+        <div style={[style.search]} className="col-xs-12 col-sm-4 col-md-6 col-lg-8">
           <div className="row end-xs">
               <div className="col-xs-8 col-sm-12 col-md-8 col-lg-8">
                 <Search />
@@ -42,12 +38,12 @@ class Top extends Component{
           </div>
 
         </div>
-        <div className="col-xs-12 col-sm-4 col-md-4 col-lg-2">
-          <FlatButton label="登陆" labelStyle={{'fontWeight':'bold',color:'#fff'}}   style={style} />
+        <div className="col-xs-4 col-sm-4 col-md-4 col-lg-2 end-xs">
+          <FlatButton label="登陆" labelStyle={{'fontWeight':'bold',color:'#fff'}}   style={style.btn} />
           <RaisedButton label="加入我们" onTouchTap={this.handleLogin} labelStyle={{'fontWeight':'bold'}}
             backgroundColor='#ff5c2d'
             labelColor='#fff'
-            style={style} />
+            style={style.btn} />
         </div>
       </div>
     )
@@ -70,4 +66,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Top)
+)(radium(Top))

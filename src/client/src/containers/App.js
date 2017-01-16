@@ -5,6 +5,7 @@ import FooterTop from '../components/FooterTop';
 import Copyright from '../components/Copyright';
 import DevTools from './DevTools';
 
+
 class App extends Component{
   render(){
     return (
@@ -16,7 +17,6 @@ class App extends Component{
               <div className="jumbotron">
                 {this.props.adv}
               </div>
-
             </div>
 
 
