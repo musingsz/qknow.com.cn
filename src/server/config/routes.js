@@ -46,10 +46,15 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  //couse
   'get /api/v1/course': 'CourseController.courseList',
   'get /api/v1/courseType/:courseType/course': 'CourseController.courseListByCourseTypeId',
   'get /api/v1/course/:courseId': 'CourseController.courseById',
   'get /api/v1/course/:courseId/video': 'VideoController.videoByCourseId',
-  'get /api/v1/course/video/:videoId': 'VideoController.videoById'
+  'get /api/v1/course/video/:videoId': 'VideoController.videoById',
+
+  //login
+  'post /api/v1/login': 'UserController.login',
+  'post /api/v1/_logout': 'UserController.logout'
 
 };

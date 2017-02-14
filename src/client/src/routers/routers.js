@@ -44,6 +44,21 @@ const video = (location, callback) => {
   }, 'video')
 }
 
+const login = (location, callback) => {
+  require.ensure([], require => {
+    const Login    = require('../containers/login/Login').default;
+    callback(null, {main:Login});
+  }, 'login')
+}
+
+const signup = (location, callback) => {
+  require.ensure([], require => {
+    const Login    = require('../containers/signup/Signup').default;
+    callback(null, {main:Login});
+  }, 'signup')
+}
+
+
 
 //路由控制
 const routes = (
@@ -52,6 +67,8 @@ const routes = (
         <Route path="coursetype/:courseTypeId/course" getComponent={course}/>
         <Route path="view/course/:courseId" getComponent={view}/>
         <Route path="course/:courseId/video/:id" getComponent={video}/>
+        <Route path="user/login" getComponent={login}/>
+        <Route path="user/signup" getComponent={signup}/>
     </Route>
 )
 

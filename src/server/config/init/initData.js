@@ -109,10 +109,23 @@ module.exports.init = () => {
    }
  ]));
 
+ // 添加统计数据
  Promise.resolve(Statistic.create({
    score:90,
    sum: 1000,
    course:1,
+ }))
+
+ //
+ // 添加角色
+  Promise.resolve(Role.create({
+    name:"超级管理员"
+  }))
+ // 添加用户
+ Promise.resolve(User.create({
+   username:"admin",
+   password: "admin",
+   role:1,
  }))
 
 

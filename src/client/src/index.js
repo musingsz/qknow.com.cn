@@ -6,6 +6,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import routes from './routers/routers';
 import configureStore from './store/configureStore';
 
+import { loginUserSuccess } from './actions/userAction'
 
 import 'flexboxgrid';
 
@@ -21,6 +22,10 @@ injectTapEventPlugin();
 
 const store = configureStore();
 
+let token = localStorage.getItem('token');
+if (token !== null) {
+    store.dispatch(loginUserSuccess(token));
+}
 
 
 

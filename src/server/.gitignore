@@ -115,5 +115,7 @@ npm-debug.log
 .netbeans
 nbproject
 .idea
+# .vsc
+.vsc
 .node_history
 yarn.lock

@@ -129,7 +129,7 @@
 </key>
 <comment>属性明细表</comment>
 </table>
-<table x="986" y="109" name="lecturer">
+<table x="810" y="98" name="lecturer">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -166,7 +166,7 @@
 </key>
 <comment>讲师表</comment>
 </table>
-<table x="1070" y="431" name="statistic">
+<table x="643" y="484" name="statistic">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -195,7 +195,7 @@
 </key>
 <comment>统计表</comment>
 </table>
-<table x="700" y="429" name="course">
+<table x="314" y="535" name="course">
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
@@ -249,5 +249,85 @@
 <part>id</part>
 </key>
 <comment>课程表</comment>
+</table>
+<table x="1048" y="232" name="user">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="role_id" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="role" row="id" />
+</row>
+<row name="username" null="1" autoincrement="0">
+<datatype>CHAR</datatype>
+<default>NULL</default><comment>用户名</comment>
+</row>
+<row name="password" null="1" autoincrement="0">
+<datatype>CHAR</datatype>
+<default>NULL</default></row>
+<row name="e-mail" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="order" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="status" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+<comment>用户表</comment>
+</table>
+<table x="1330" y="219" name="role">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="name" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="order" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="status" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+</table>
+<table x="1090" y="484" name="menu">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="name" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="order" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="status" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
+<comment>菜单表</comment>
+</table>
+<table x="1496" y="486" name="role-menu">
+<row name="id" null="1" autoincrement="1">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
+<row name="id_menu" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="menu" row="id" />
+</row>
+<row name="id_role" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><relation table="role" row="id" />
+</row>
+<key type="PRIMARY" name="">
+<part>id</part>
+</key>
 </table>
 </sql>
