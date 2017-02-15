@@ -1,8 +1,12 @@
 import React, {Component} from "react";
 import { connect } from 'react-redux';
 import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
+import Avatar from 'material-ui/Avatar';
+import DropDownMenu from 'material-ui/DropDownMenu';
+import MenuItem from 'material-ui/MenuItem';
 import { Link } from 'react-router';
+import { logoutAndRedirect } from '../actions/userAction'
+
 import logo from '../images/logo.png';
 import Search from './Search';
 import style from './top/top.css'
@@ -16,21 +20,34 @@ class Top extends Component{
   constructor(props){
     super(props);
     this.handleLogin = this.handleLogin.bind();
-  }
 
+  }
 
   handleLogin=() => {
 
   }
 
+  /*
+  退出
+   */
+  handleLogout(events, value){
+    if(value === 1) {
+      this.props.logoutAndRedirect();
+    }
+  }
+
   render(){
+
     const { user } = this.props;
 
     const userInfo  = (user.get("isAuthenticated")  ? (
-      <FlatButton
-        label = {user.get("userName")}
-        style={style.btn}
-      />
+        <div>
+          <Avatar src="https://avatars0.githubusercontent.com/u/8409001?v=3&s=460" />
+          <DropDownMenu value={1} onChange={this.handleLogout.bind(this)}>
+            <MenuItem value={1} primaryText={user.get("userName")} />
+            <MenuItem value={2} primaryText="退出" />
+          </DropDownMenu>
+        </div>
     ):(
       <div>
         <RaisedButton label="登陆"
@@ -38,7 +55,7 @@ class Top extends Component{
        style={style.btn}
        primary={true}
        containerElement={
-         <Link  to={`/user/login`}>
+         <Link  to={`/user/login?next=${this.props.location.pathname}`}>
          </Link>
        }
        />
@@ -77,6 +94,10 @@ class Top extends Component{
   }
 };
 
+Top.childContextTypes = {
+    location: React.PropTypes.object
+}
+
 const mapStateToProps = (state) => {
   return {
     user: state.user
@@ -85,7 +106,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-
+    logoutAndRedirect: () => {
+      dispatch(logoutAndRedirect())
+    }
   }
 }
 

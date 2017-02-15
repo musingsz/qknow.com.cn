@@ -9,12 +9,17 @@ import { loginUser } from '../../actions/userAction'
 class Login extends Component {
   constructor(props) {
     super(props)
-    const redirectRoute = this.props.location.query.next || '/user/login';
+    const redirectRoute = this.props.location.query.next || '/';
     this.state = {
       username: '',
       password: '',
       redirectTo: redirectRoute
     };
+  }
+
+  componentWillMount(){
+
+
   }
 
   handleUserChange(obj){

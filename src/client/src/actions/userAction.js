@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { browserHistory } from 'react-router';
 import config from '../../config/default.config';
 import {
   LOGIN_USER_REQUEST,
@@ -49,7 +50,7 @@ export function logout() {
 export function logoutAndRedirect() {
   return (dispatch, state) => {
     dispatch(logout());
-    dispatch(pushState(null, '/login'));
+    browserHistory.push("/user/login");
   }
 }
 
@@ -66,13 +67,14 @@ export function loginUser(username, password, redirect = "/") {
       }
       return response.data.data;
     }).then(function(response) {
-      console.log("data",response);
-
       try {
-        
+
         dispatch(loginUserSuccess(response.token));
-        //dispatch(pushState(null, redirect));
+        browserHistory.push(redirect);
+
       } catch (e) {
+        console.log("e",e);
+
         dispatch(loginUserFailure({
           response: {
             status: 403,

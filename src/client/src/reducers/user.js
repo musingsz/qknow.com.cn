@@ -21,7 +21,6 @@ const initialState = map({
 });
 
 const user = (state = initialState, action) => {
-  console.log("action",action);
 
   switch (action.type) {
     case LOGIN_USER_SUCCESS:

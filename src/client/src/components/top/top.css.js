@@ -8,6 +8,9 @@ const style = {
     '@media screen and (max-width:780px)':{
       display:"none"
     }
+  },
+  avatar:{
+    left: 70
   }
 
 }
