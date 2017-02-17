@@ -19,8 +19,21 @@ module.exports = {
 				})
 			})
 	},
-	logout: () => {
+	logout: (req, res) => {
 
+	},
+	create: (req, res) => {
+		let username = req.body.username;
+		let password = req.body.password;
+		let e_mail = req.body.email;
+		UserService.createUser({
+			username: username,
+      password: password,
+      e_mail: e_mail
+		},(err,user) => {
+			if (err) return res.apiError(err);
+			return res.apiSuccess();
+		})
 	}
 
 };

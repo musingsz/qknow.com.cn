@@ -54,7 +54,8 @@ module.exports.routes = {
   'get /api/v1/course/video/:videoId': 'VideoController.videoById',
 
   //login
-  'post /api/v1/login': 'UserController.login',
-  'post /api/v1/_logout': 'UserController.logout'
+  'post /api/v1/user/login': 'UserController.login',
+  'post /api/v1/user/_logout': 'UserController.logout',
+  'post /api/v1/user': 'UserController.create',
 
 };

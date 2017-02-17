@@ -59,7 +59,7 @@ class Top extends Component{
          </Link>
        }
        />
-       <RaisedButton label="加入我们" onTouchTap={this.handleLogin} labelStyle={{'fontWeight':'bold'}}
+       <RaisedButton label="加入我们"  labelStyle={{'fontWeight':'bold'}}
 
                    backgroundColor='#ff5c2d'
                    labelColor='#fff'

@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, IndexRoute} from 'react-router';
 import Jumbotron from "../components/Jumbotron";
 import Home from "../containers/Home";
-
+import { requireAuthentication } from '../components/authenticatedComponent/AuthenticatedComponent';
 
 
 
@@ -39,7 +39,7 @@ const view = (location, callback) => {
 
 const video = (location, callback) => {
   require.ensure([], require => {
-    const Video    = require('../containers/Video').default;
+    const Video    = requireAuthentication(require('../containers/Video').default);
     callback(null, {main:Video});
   }, 'video')
 }

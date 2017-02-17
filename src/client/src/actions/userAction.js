@@ -6,6 +6,8 @@ import {
   LOGIN_USER_FAILURE,
   LOGIN_USER_SUCCESS,
   LOGOUT_USER,
+  CREATE_USER_SUCCESS,
+  CREATE_USER_FAILURE,
   FETCH_PROTECTED_DATA_REQUEST,
   RECEIVE_PROTECTED_DATA
 } from '../constants'
@@ -39,12 +41,25 @@ export function loginUserRequest() {
   }
 }
 
+export function createUserSuccess() {
+  return {
+    type: CREATE_USER_SUCCESS
+  }
+}
+
+export function createUserFailure() {
+  return {
+    type: CREATE_USER_FAILURE
+  }
+}
+
 export function logout() {
   localStorage.removeItem('token');
   return {
     type: LOGOUT_USER
   }
 }
+
 
 
 export function logoutAndRedirect() {
@@ -56,9 +71,8 @@ export function logoutAndRedirect() {
 
 
 export function loginUser(username, password, redirect = "/") {
-
   return (dispatch) => {
-    axios.post(config.API_URL + `/login`,{
+    axios.post(config.API_URL + `/user/login`,{
       username: username,
       password: password
     }).then(function(response) {
@@ -73,8 +87,6 @@ export function loginUser(username, password, redirect = "/") {
         browserHistory.push(redirect);
 
       } catch (e) {
-        console.log("e",e);
-
         dispatch(loginUserFailure({
           response: {
             status: 403,
@@ -84,6 +96,29 @@ export function loginUser(username, password, redirect = "/") {
       }
     }).catch(error => {
       dispatch(loginUserFailure(error));
+    })
+  }
+}
+
+export function createUser(username, password, email) {
+  return (dispatch) => {
+    axios.post(config.API_URL + `/user`,{
+      username: username,
+      password: password,
+      email: email
+    }).then(function(response) {
+      if (response.status !== 200 && response.data.meta.code !== 200) {
+        throw new Error("Bad response from server");
+      }
+      return response.data.data;
+    }).then(function(response) {
+      try {
+        dispatch(createUserSuccess());      
+      } catch (e) {
+        dispatch(createUserFailure());
+      }
+    }).catch(error => {
+      dispatch(createUserFailure());
     })
   }
 }

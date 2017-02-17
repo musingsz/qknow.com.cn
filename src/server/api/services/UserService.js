@@ -1,6 +1,7 @@
 const bcrypt = require('bcrypt-nodejs');
 const jwt = require('jwt-simple');
 const moment = require('moment');
+const Promise = require("bluebird");
 //const shortid = require('shortid');
 
 // this would need to live in sails config
@@ -25,6 +26,7 @@ module.exports = {
       encodedToken = jwt.encode({
         id: user.id,
         username: user.username,
+        role: user.role,
         issued: issueDate
       }, jwtSecret);
     } catch (err) {
@@ -68,5 +70,17 @@ module.exports = {
 
         return done(null, user);
       });
+  },
+  createUser:(obj,done) => {
+    Promise.resolve(User.create({
+      username: obj.username,
+      password: obj.password,
+      e_mail: obj.e_mail,
+      role: 1
+    })).then((user) => {
+      done(null,user)
+    }).catch((err) => {
+      done(err)
+    })
   }
 }
