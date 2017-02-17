@@ -16,9 +16,16 @@ function fetchVideoSuccess(data){
 
 
 //根据课程id获取详情
-export function fetchVideoById(id){
+export function fetchVideoById(id,token,issued){
+  console.log("token",token);
+
   return (dispatch)=>{
-    axios.get(config.API_URL+`/course/video/${id}`).then(function(response){
+    axios.get(config.API_URL+`/course/video/${id}`,{
+       headers: {
+         'x-token': `${token}`,
+         'x-token-issued': `${issued}`,
+       }
+    }).then(function(response){
       if(response.status !== 200 && response.data.meta.code !== 200){
         throw new Error("Bad response from server");
       }

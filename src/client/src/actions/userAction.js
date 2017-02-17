@@ -7,9 +7,7 @@ import {
   LOGIN_USER_SUCCESS,
   LOGOUT_USER,
   CREATE_USER_SUCCESS,
-  CREATE_USER_FAILURE,
-  FETCH_PROTECTED_DATA_REQUEST,
-  RECEIVE_PROTECTED_DATA
+  CREATE_USER_FAILURE
 } from '../constants'
 
 
@@ -113,7 +111,7 @@ export function createUser(username, password, email) {
       return response.data.data;
     }).then(function(response) {
       try {
-        dispatch(createUserSuccess());      
+        dispatch(createUserSuccess());
       } catch (e) {
         dispatch(createUserFailure());
       }

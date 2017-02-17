@@ -10,8 +10,8 @@ class PlyrMidea extends React.Component {
     'source': PropTypes.object  // this is a source object from the docs
   }
 
-  componentWillReceiveProps(nextProps){
-    this.player.source(this.props.source);
+  componentWillReceiveProps(nextProps, nextState){
+    this.player.source(nextProps.source);
   }
 
   componentDidMount () {

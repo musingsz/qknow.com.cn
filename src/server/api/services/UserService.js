@@ -65,9 +65,8 @@ module.exports = {
       .findOne({
         id: tokenObj.id
       })
-      .done(function(err, user) {
+      .exec(function(err, user) {
         if (err) return done(err);
-
         return done(null, user);
       });
   },

@@ -6,7 +6,7 @@ import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 import { Link } from 'react-router';
 import { logoutAndRedirect } from '../actions/userAction'
-
+import { browserHistory } from 'react-router';
 import logo from '../images/logo.png';
 import Search from './Search';
 import style from './top/top.css'
@@ -36,6 +36,14 @@ class Top extends Component{
     }
   }
 
+  handleJoin(){
+
+    if(this.props.location.pathname !== "/user/signup"){
+      browserHistory.push("/user/signup");
+    }
+
+  }
+
   render(){
 
     const { user } = this.props;
@@ -60,13 +68,13 @@ class Top extends Component{
        }
        />
        <RaisedButton label="加入我们"  labelStyle={{'fontWeight':'bold'}}
-
                    backgroundColor='#ff5c2d'
                    labelColor='#fff'
-                   containerElement={
-                     <Link  to={`/user/signup`}>
-                     </Link>
-                   }
+                   onTouchTap={this.handleJoin.bind(this)}
+                  //  containerElement={
+                  //    <Link  to={`/user/signup`}>
+                  //    </Link>
+                  //  }
                    style={style.btn} />
     </div>
 

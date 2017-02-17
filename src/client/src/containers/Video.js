@@ -38,7 +38,9 @@ const style = {
 
 class Video extends Component{
   componentDidMount = ()=>{
-    this.props.onLoadVideo(this.props.params.id);
+    let token = this.props.user.get("token");
+    let issued = this.props.user.get("issued");
+    this.props.onLoadVideo(this.props.params.id,token,issued);
     this.props.onLoadCourse(this.props.params.courseId);
   }
 
@@ -63,8 +65,6 @@ class Video extends Component{
     ) : (
       <RaisedButton disabled  label="下一节" primary={true}  />
     );
-
-
 
     //http://qknow1.oss-cn-shanghai.aliyuncs.com/chrome_01_2016-08-29_222508.mp4
     return (
@@ -113,14 +113,15 @@ class Video extends Component{
 const mapStateToProps = (state) => {
   return {
       video:state.video,
-      course:state.course
+      course:state.course,
+      user:state.user
   }
 };
 
 const mapDispatchToProps = (dispatch) =>{
   return {
-    onLoadVideo:(id)=>{
-      dispatch(fetchVideoById(id))
+    onLoadVideo:(id,token,issued)=>{
+      dispatch(fetchVideoById(id,token,issued))
     },
     onLoadCourse:(id)=>{
       dispatch(fetchCourseById(id))

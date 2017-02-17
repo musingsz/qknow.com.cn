@@ -2,20 +2,19 @@ import {
   Map as map
 } from 'immutable';
 const jwt = require('jwt-simple');
+import config from '../../config/default.config';
 import {
-  LOGIN_USER_REQUEST,
   LOGIN_USER_FAILURE,
   LOGIN_USER_SUCCESS,
   LOGOUT_USER,
   CREATE_USER_SUCCESS,
-  CREATE_USER_FAILURE,
-  FETCH_PROTECTED_DATA_REQUEST,
-  RECEIVE_PROTECTED_DATA
+  CREATE_USER_FAILURE
 } from '../constants'
 
 
 const initialState = map({
   token: null,
+  issued: null,
   userName: null,
   isAuthenticated: false,
   isAuthenticating: false,
@@ -32,10 +31,11 @@ const user = (state = initialState, action) => {
         'isAuthenticating': false,
         'isAuthenticated': true,
         'token': action.payload.token,
-        'userName': jwt.decode(action.payload.token, "xStmbyc066BOFn40gIr29y09Ud94z1P7").username,
+        'userName': jwt.decode(action.payload.token, config.jwtSecret).username,
+        'issued': jwt.decode(action.payload.token, config.jwtSecret).issued,
         'statusText': 'You have been successfully logged in.',
         isCreateUser: false,
-        role: jwt.decode(action.payload.token, "xStmbyc066BOFn40gIr29y09Ud94z1P7").role
+        role: jwt.decode(action.payload.token, config.jwtSecret).role
       });
     case LOGIN_USER_FAILURE:
       return map({
