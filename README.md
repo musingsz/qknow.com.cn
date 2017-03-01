@@ -9,11 +9,9 @@
 5. [fontawesome图标](http://fontawesome.io/)
 
 #### 后台
-1. [octobercms](http://octobercms.com/)
+1. [sailsjs](http://sailsjs.com/)
 
-注意:前台用API，后台用模板引擎。
-
-
+注意:前后台全部分离
 
 ### 阿里云服务器
 1. [nginx](http://nginx.org/)
