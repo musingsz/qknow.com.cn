@@ -34,6 +34,11 @@ module.exports = {
 			if (err) return res.apiError(err);
 			return res.apiSuccess();
 		})
+	},
+	getAllUser: (req, res) => {
+		UserService.getAllUser({},(err, users) => {
+			if (err) return res.apiError(err);
+			return res.apiSuccess(users);
+		})
 	}
-
 };

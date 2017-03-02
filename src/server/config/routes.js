@@ -58,4 +58,7 @@ module.exports.routes = {
   'post /api/v1/user/_logout': 'UserController.logout',
   'post /api/v1/user': 'UserController.create',
 
+  //user
+  'get /api/v1/users': 'UserController.getAllUser',
+
 };

@@ -81,5 +81,15 @@ module.exports = {
     }).catch((err) => {
       done(err)
     })
+  },
+  getAllUser:(obj,done) => {
+    Promise.resolve(User.find({
+      status: 1
+    }).populate('role'))
+    .then((users) => {
+      done(null,users)
+    }).catch((err) => {
+      done(err)
+    })
   }
 }
