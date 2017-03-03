@@ -16,9 +16,21 @@ myApp.config(['NgAdminConfigurationProvider', function(NgAdminConfigurationProvi
 
     // add entities
     admin.addEntity(nga.entity('users'));
+    admin.addEntity(nga.entity('roles'));
+    admin.addEntity(nga.entity('courseType'));
+    admin.addEntity(nga.entity('lecturers'));
+    admin.addEntity(nga.entity('statistics'));
+    admin.addEntity(nga.entity('course'));
+    admin.addEntity(nga.entity('videos'));
 
     // configure entities
     require('./modules/users/config')(nga, admin);
+    require('./modules/courseType/config')(nga, admin);
+    require('./modules/lecturers/config')(nga, admin);
+    require('./modules/statistics/config')(nga, admin);
+    require('./modules/courses/config')(nga, admin);
+    require('./modules/videos/config')(nga, admin);
+
     // ...
     //menu
     admin.menu(require('./menu')(nga, admin));
@@ -28,7 +40,6 @@ myApp.config(['NgAdminConfigurationProvider', function(NgAdminConfigurationProvi
 
 myApp.config(['RestangularProvider', function(RestangularProvider) {
     RestangularProvider.addResponseInterceptor((data,operation) => {
-      console.log("element.data",data);
       return data.data;
     })
 }]);

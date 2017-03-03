@@ -25,9 +25,28 @@ module.exports = {
     Course.findOne({
         "id": obj.courseId
       })
+      .populate('course_type')
+      .populate('lecturer')
       .exec((err, course) => {
         if (err) next(err, null);
         next(null, course);
       });
-  }
+  },
+  UpdateCourseById:(obj,done) => {
+    Promise.resolve(Course.update({
+      id: obj.id
+    },obj))
+    .then((course) => {
+      done(null,course)
+    }).catch((err) => {
+      done(err)
+    })
+  },
+  createCourse:(obj,done) => {
+    Promise.resolve(Course.create(obj)).then((course) => {
+      done(null,course)
+    }).catch((err) => {
+      done(err)
+    })
+  },
 }

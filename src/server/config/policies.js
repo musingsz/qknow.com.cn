@@ -29,7 +29,7 @@ module.exports.policies = {
   //'*': "authenticated",
 
   VideoController: {
-    "videoById": "authenticated"
+    //"videoById": "authenticated"
   }
   /***************************************************************************
   *                                                                          *

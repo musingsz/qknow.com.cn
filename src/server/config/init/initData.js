@@ -118,9 +118,14 @@ module.exports.init = () => {
 
  //
  // 添加角色
-  Promise.resolve(Role.create({
-    name:"超级管理员"
-  }))
+  Promise.resolve(Role.create([
+    {
+      name:"超级管理员"
+    },
+    {
+      name:"用户"
+    }
+  ]))
  // 添加用户
  Promise.resolve(User.create({
    username:"admin",

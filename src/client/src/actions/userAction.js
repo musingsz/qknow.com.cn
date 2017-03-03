@@ -63,14 +63,14 @@ export function logout() {
 export function logoutAndRedirect() {
   return (dispatch, state) => {
     dispatch(logout());
-    browserHistory.push("/user/login");
+    browserHistory.push("/users/login");
   }
 }
 
 
 export function loginUser(username, password, redirect = "/") {
   return (dispatch) => {
-    axios.post(config.API_URL + `/user/login`,{
+    axios.post(config.API_URL + `/users/login`,{
       username: username,
       password: password
     }).then(function(response) {
@@ -100,7 +100,7 @@ export function loginUser(username, password, redirect = "/") {
 
 export function createUser(username, password, email) {
   return (dispatch) => {
-    axios.post(config.API_URL + `/user`,{
+    axios.post(config.API_URL + `/users`,{
       username: username,
       password: password,
       email: email

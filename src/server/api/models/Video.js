@@ -34,13 +34,16 @@ module.exports = {
       model: 'Course'
     },
     parent_video:{
-      model: "Video"
+      model: "Video",
+      defaultsTo: 0
     },
     pre_video:{
-      model: "Video"
+      model: "Video",
+      defaultsTo: 1
     },
     next_video:{
-      model: "Video"
+      model: "Video",
+      defaultsTo: 1
     }
   }
 };

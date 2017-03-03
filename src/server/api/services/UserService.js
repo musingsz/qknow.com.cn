@@ -75,7 +75,7 @@ module.exports = {
       username: obj.username,
       password: obj.password,
       e_mail: obj.e_mail,
-      role: 1
+      role: obj.role.id
     })).then((user) => {
       done(null,user)
     }).catch((err) => {
@@ -88,6 +88,32 @@ module.exports = {
     }).populate('role'))
     .then((users) => {
       done(null,users)
+    }).catch((err) => {
+      done(err)
+    })
+  },
+  getUserById:(obj,done) => {
+    Promise.resolve(User.findOne({
+      status: 1,
+      id: obj.id
+    }).populate('role'))
+    .then((user) => {
+      done(null,user)
+    }).catch((err) => {
+      done(err)
+    })
+  },
+  UpdateUserById:(obj,done) => {
+    Promise.resolve(User.update({
+      id: obj.id
+    },{
+      username: obj.username,
+      password: obj.password,
+      e_mail: obj.e_mail,
+      role: obj.role
+    }))
+    .then((user) => {
+      done(null,user)
     }).catch((err) => {
       done(err)
     })

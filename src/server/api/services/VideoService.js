@@ -1,3 +1,5 @@
+const Promise = require("bluebird");
+
 module.exports = {
   //根据课程ID 查询视频
   videoByCourseId: (obj, next) => {
@@ -24,9 +26,38 @@ module.exports = {
   videoById: (obj, next) => {
     Video.findOne({
       id: obj.videoId
-    }).exec((err, videos) => {
+    }).populate('course')
+     .populate('parent_video')
+     .populate('pre_video')
+     .populate('next_video').exec((err, videos) => {
       if (err) next(err, null);
       next(null, videos);
     });
+  },
+  getAllVideos: (obj,done) => {
+    Promise.resolve(Video.find({
+      status: 1
+    }).populate('course').populate('parent_video')).then((videos) => {
+      done(null,videos)
+    }).catch((err) => {
+      done(err)
+    })
+  },
+  UpdateVideoById:(obj,done) => {
+    Promise.resolve(Video.update({
+      id: obj.id
+    },obj))
+    .then((video) => {
+      done(null,video)
+    }).catch((err) => {
+      done(err)
+    })
+  },
+  createVideo:(obj,done) => {
+    Promise.resolve(Video.create(obj)).then((video) => {
+      done(null,video)
+    }).catch((err) => {
+      done(err)
+    })
   }
 }
