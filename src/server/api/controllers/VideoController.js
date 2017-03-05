@@ -30,6 +30,12 @@ module.exports = {
       return res.apiSuccess(video)
 		})
 	},
+  getvideoById: (req, res) => {
+    VideoService.videoById({videoId:req.params.videoId},(err,video) => {
+      if (err) return res.apiError(err);
+      return res.apiSuccess(video)
+    })
+  },
   getAllVideos: (req,res) => {
     VideoService.getAllVideos({},(err, videos) => {
       if (err) return res.apiError(err);

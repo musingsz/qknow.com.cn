@@ -62,7 +62,7 @@ module.exports.routes = {
   'get /api/v1/course/:courseId/video': 'VideoController.videoByCourseId',
   'get /api/v1/course/video/:videoId': 'VideoController.videoById',
   'get /api/v1/videos': 'VideoController.getAllVideos',
-  'get /api/v1/videos/:videoId': 'VideoController.videoById',
+  'get /api/v1/videos/:videoId': 'VideoController.getvideoById',
   'put /api/v1/videos/:id': 'VideoController.UpdateVideoById',
   'post /api/v1/videos': 'VideoController.createVideo',
 
