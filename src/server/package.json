@@ -34,6 +34,7 @@
   },
   "scripts": {
     "debug": "node debug app.js",
+    "pm2": "cross-env NODE_ENV=production start app.js",
     "dev": "cross-env NODE_ENV=development node app.js",
     "start": "cross-env NODE_ENV=production node app.js",
     "test": "node ./node_modules/mocha/bin/mocha test/bootstrap.test.js test/integration/**/*.test.js"
