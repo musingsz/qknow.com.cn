@@ -19,7 +19,7 @@ handler.on('push', function (event) {
     event.payload.repository.name,
     event.payload.ref);
   if(event.payload.ref === 'refs/heads/master'){
-    exec('sh deply',(err,stdout,stderr) => {
+    exec('sh deply.sh',(err,stdout,stderr) => {
         console.log(err,stdout,stderr);
      });
   }
