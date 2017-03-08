@@ -13,7 +13,7 @@ class App extends Component{
           <div>
             <header>
               <div className="container">
-                <Top  />
+                <Top location={this.props.location} />
                 <div className="jumbotron">
                   {this.props.adv}
                 </div>

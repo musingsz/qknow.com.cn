@@ -1,7 +1,8 @@
 {
   "name": "qknow.com.cn",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
+  "homepage": "http://qknow.com.cn",
   "scripts": {
     "start": "cross-env NODE_ENV=development node ./scripts/start.js ",
     "build": "cross-env NODE_ENV=production node ./scripts/build.js"
@@ -60,6 +61,7 @@
     "classnames": "^2.2.5",
     "flexboxgrid": "^6.3.1",
     "font-awesome": "^4.6.3",
+    "gh-pages": "^0.12.0",
     "immutable": "^3.8.1",
     "jwt-simple": "^0.5.1",
     "lodash": "^4.15.0",
